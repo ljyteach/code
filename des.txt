@@ -1,6 +1,8 @@
-课程分为三步分：
+﻿课程分为三步分：
 第一部分：网页制作 免费（计算机相关专业）
   内容：div+css 
+        html5新标签
+        css3选择器
         ps切片 
         sublime dw 
         网站原理 
@@ -16,14 +18,17 @@
         DOM
         javascript提高篇
         jquery插件
-        ajax：使用node搭建服务器环境，原生、jquery、跨域
-        bootstrap：以ui为主
-        angular：模块化 控制器 视图 作用域 过滤器 指令 路由 XHR
+        ajax：使用node搭建服务器环境，原生、jquery、跨域       
         前端开发工具的使用：git gulp npm
-        html5：新标签、新的javascript api、
-        css3：选择器、动画、媒体查询
-        移动端页面布局
-        浏览器兼容问题
+        angular：模块化 控制器 视图 作用域 过滤器 指令 路由 XHR
+        html5：移动端javascript api
+        移动端页面布局：viewport、flexbox
+        响应式页面布局：媒体查询、百分比布局、弹性图片
+        bootstrap：响应式布局
+        css3：动画
+        zepto：事件
+        webapp打包
+        浏览器兼容问题：css hack,ie bug，DOM兼容问题，框架与库兼容问题，html5兼容问题
 
     第二部分以单独的小型案例为主、大部分理论知识自行脑补，理论知识和案例的代码会上传到github上，课上主要负责答疑和讲案例。
     课程开始后，每个同学都要有自己的github账号，作业代码上传到github上。
