@@ -1,11 +1,11 @@
 ﻿课程分为三步分：
 第一部分：网页制作 免费（计算机相关专业）
-  内容：div+css 
+  内容：div+css
         html5新标签
         css3选择器
-        ps切片 
-        sublime dw 
-        网站原理 
+        ps切片
+        sublime dw
+        网站原理
         第二部分课程大纲介绍：即使不学第二部分也可以作为知识扩展
   （加群，交流问题）
   目标：制作简单的网页
@@ -18,7 +18,7 @@
         DOM
         javascript提高篇
         jquery插件
-        ajax：使用node搭建服务器环境，原生、jquery、跨域       
+        ajax：使用node搭建服务器环境，原生、jquery、跨域
         前端开发工具的使用：git gulp npm
         angular：模块化 控制器 视图 作用域 过滤器 指令 路由 XHR
         html5：移动端javascript api
@@ -45,5 +45,3 @@
     在项目实践中，会根据学员学习情况分配不同的任务，使用git管理代码并在github上创建开源项目。
 
   规范：命名规范、格式规范、注释规范......
-
-
