@@ -8,6 +8,7 @@
 + [导航滚动]()
 + [百叶窗]()
 + [选项卡]()
++ 图片轮播 [示例](http://www.52xxqd.com/jQuery/example/1/index.html) [代码](https://github.com/ljyteach/jQuery/tree/gh-pages/example/1)
 + [显示大图]()
 
 ##### DOM树状结构
