@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+//先看语句的用法，再做简单的例子。
+
+//if语句语法，每一个都会判断， else if 中 当遇到true就不会继续判断。
+if(true){
+	console.log("if中的内容")
+}else{
+	console.log("else中的内容")
+}
+//例子：猜数字。
+
+//for语句
+for(var i = 0;i<10;i++){
+	console.log(i);
+}
+for(var i = 0;i<10;i++){
+	if(i == 3){
+		continue;
+	}
+	console.log(i);
+}
+for(var i = 0;i<10;i++){
+	if(i == 3){
+		break;
+	}
+	console.log(i);
+}
+
+//switch语句
+switch(4){
+	case 1:console.log("case1");break;
+	case 2:console.log("case2");break;
+	case 3:console.log("case3");break;
+	case 4:console.log("case4");break;
+}
+
+//while语句
+var n = 0;
+while(n<10){
+	console.log("while"+n);
+	n++;
+}
+
+var m = 0;
+do{
+	console.log("do-while"+m);
+	m++;
+}while(m<10)
+
+
+</script>
+</body>
+</html>

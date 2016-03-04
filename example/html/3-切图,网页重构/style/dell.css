@@ -1,0 +1,77 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+#header{
+	height:482px;
+	width:930px;
+	margin:0 auto;
+}
+#header .top{
+	height:102px;
+	width:930px;
+}
+#header .top .logo{
+	width:109px;
+	height:102px;
+	float: left;
+}
+#header .top .logo img{
+	margin-top:8px;
+}
+
+#header .top .nav{
+	width:502px;
+	height:102px;
+	list-style: none;
+	float: left;
+}
+
+#header .top .nav li{
+	margin-left:31px;
+	float: left;
+	margin-top: 50px;
+	padding-right:19px;
+	background-image: url(../images/icon-san.gif);
+	background-position: right 10px;
+	background-repeat: no-repeat;
+	
+
+}
+#header .top .nav li a span{
+	display:block;
+	font-size: 12px;
+}
+
+#header .banner{
+	width:930px;
+	height:380px;
+}
+#container{
+	width:930px;
+	margin: 23px auto;
+}
+.con-top-left{
+	height:285px;
+	width:300px;
+	border:1px solid #cacaca;
+}
+.con-top-left h5{
+	height:31px;
+	line-height: 31px;
+}
+.c-t-l-p{
+	width:300px;
+	height:130px;
+}
+.c-t-l-l{
+	list-style-image: url(../images/icon-hengsan.gif);
+	width: 209px;
+	margin:0 auto;
+	margin-top:13px;
+}
+.c-t-l-l p{
+	line-height: 20px;
+	font-size: 12px;
+
+}

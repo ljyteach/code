@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+.btn {
+	display: block;
+	height: 38px;
+	width: 80px;
+	background-color: #aaa;
+	border: 1px solid #00f;
+	text-align: center;
+	line-height: 38px;
+	color: #fff;
+	text-decoration: none;
+	cursor:default;
+}
+.active {
+	background-color: #f00;
+	cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+<div> <span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span> </div>
+<a class="btn" href="#">开始抢购</a> 
+<script type="text/javascript" src="script/jquery-1.11.1.js"></script> 
+<script type="text/javascript">
+
+//设置抢购时间
+var targetTime = [15,09,00];
+
+var targetHours; 
+var targetMinutes;
+var targetseconds;
+
+var t = setInterval(getTargetTime,1000);
+function getTargetTime(){
+	var dateNow = new Date();
+	var hours = dateNow.getHours();
+	var minutes = dateNow.getMinutes();
+	var seconds = dateNow.getSeconds();
+	//console.log(1);
+	targetHours = targetTime[0] - hours;
+	if(targetTime[1] >= minutes){
+		targetMinutes = targetTime[1] - minutes;
+	}else{
+		targetMinutes = 60 + targetTime[1] - minutes;
+		targetHours -= 1;
+	}
+	if(targetTime[2] >= seconds){
+		targetseconds = targetTime[2] - seconds;
+	}else{
+		targetseconds = 60 + targetTime[2] - seconds;
+		targetMinutes -= 1;
+	}
+	$("#hours").text(targetHours);
+	$("#minutes").text(targetMinutes);
+	$("#seconds").text(targetseconds);
+	if(targetHours==0&&targetMinutes==0&&targetseconds==0){
+		clearInterval(t);
+		$(".btn").addClass("active");
+	}
+}
+
+
+</script>
+</body>
+</html>

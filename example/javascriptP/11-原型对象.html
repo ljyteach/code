@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+
+	<script type="text/javascript">
+	//理解原型对象：构造函数的prototype属性指向这个构造函数的原型对象。
+	//可以在构造函数中指定新建对象的属性和方法，也可以在原型对象上添加属性和方法。
+	function Father(lastName,age){
+		this.lastName = lastName;
+		this.age = age;
+	};
+	Father.prototype.firstName = "李";
+	Father.prototype.teachSon = function(){
+		console.log("打");
+	};
+	Father.prototype.sayName = function(){
+		console.log("我是"+this.firstName+this.lastName)
+	}
+
+	var father = new Father("老三",40);
+	father.teachSon();
+	father.sayName();
+
+	function Son(lastName,age){
+		this.lastName = lastName;
+		this.age = age;
+	};
+
+	Son.prototype = new Father();
+	var son = new Son("小明",10);
+	son.sayName();
+	son.teachSon();
+
+	//总结：构造函数创建对象，属性和方法属于指定对象的，写在构造函数中，对象共有的，写在原型对象中。
+	//例如：数组的元素是每个数组都不一样，所以卸载构造函数中。数组的方法是所有数组共有的，写在原型对象上。
+
+
+
+	
+
+
+	</script>
+</body>
+</html>

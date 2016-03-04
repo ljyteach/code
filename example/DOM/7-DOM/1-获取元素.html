@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<input type="text" class="num" />+
+<input type="text" class="num" />=
+<input type="text" class="num" />
+<input type="button" id="btn" value="计算" />
+
+<script type="text/javascript">
+//通过ID获取元素。
+//$("#btn")
+var oBtn = document.getElementById("btn");
+
+//返回值是一个数组
+var aNum = document.getElementsByClassName("num");
+
+
+//点击事件 onclick
+oBtn.onclick = function(){
+	//alert(this.value)
+	var num1 = Number(aNum[0].value);  //获取元素的属性
+	var num2 = Number(aNum[1].value);
+	var result = num1 + num2;
+	aNum[2].value = result;    //设置元素属性
+}
+
+//var aInput = document.getElementsByTagName("input");
+</script>
+</body>
+</html>

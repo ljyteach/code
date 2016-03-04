@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+<body>
+
+<script type="text/javascript">
+//什么是构造函数，以数组为例。
+var arr = new Array();  //创建一个空数组
+console.log(arr);
+
+var students = new Array("小明","小强","小红","小刚");  //等同于["小明","小强","小红","小刚"]
+console.log(students);
+
+//以Object为例
+var person = new Object({name:"小明",age:2});
+console.log(person);
+
+
+//创建一个构造函数。
+
+function Cat(name,age,color){
+	this.name = name;
+	this.age = age;
+	this.color = color;
+	this.sayName = function(){
+		console.log("我的名字是" + this.name)
+	}
+}
+
+//可以通过构造函数来创建对象。
+
+var cat = new Cat("喵喵",2,"red");
+
+console.log(cat.name);
+console.log(cat.age);
+cat.sayName();
+
+</script>
+
+</body>
+</html>

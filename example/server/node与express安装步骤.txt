@@ -1,0 +1,6 @@
+1、下载nodejs  https://nodejs.org/en/
+2、安装nodejs
+3、安装express  npm -g install express
+4、安装express-generator:安装后可以使用express命令
+5、使用express命令创建一个项目。
+6、安装express项目依赖的模块 ：cd nodepro && npm install

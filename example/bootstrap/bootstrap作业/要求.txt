@@ -1,0 +1,5 @@
+1、导航置顶
+2、点击导航滚动到页面相应的位置
+3、内容轮播
+4、动态排版插件 jQuery isotope  演示   http://www.5icool.org/demo/2011/a00472/
+5、幻灯片插件 owl.carousel.js   演示  http://www.dowebok.com/demo/2014/93/

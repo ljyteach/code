@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>图片滑动问题</title>
+<style type="text/css">
+*{margin:0;padding:0}
+
+.picbox{float:left;height:550px;overflow:hidden;position:relative;width:350px;}
+.one,.two{height:275px;overflow:hidden;position:absolute;border:1px solid #fff;}
+.one{top:0px;left:0px;z-index:999;}
+.two{top:275px;;px;left:0px;z-index:1;}
+</style>
+<script type="text/javascript" src="jquery-1.11.1.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".one").hover(function(){
+		$(this).stop().animate({"height":"345px"},300)
+	},function(){
+		$(this).stop().animate({"height":"275px"},300)
+	})
+	$(".two").hover(function(){
+		$(this).stop().css("z-index","1000").animate({"height":"345px","top":"205","z-index":"1000"},300)
+	},function(){
+		$(this).stop().animate({"height":"275px","top":"275"},300,function(){
+				$(this).css("z-index","1")
+			})
+	})
+})
+
+</script>
+</head>
+
+<body>
+<div id="box">
+  <div class="picbox">
+  <div class="one"> <a href="#"><img src="image/one1 (1).jpg" /></a> </div>
+  <div class="two"> <a href="#"><img src="image/one1 (2).jpg" /></a> </div>
+  </div>
+  <div class="picbox">
+  <div class="one"> <a href="#"><img src="image/one1 (3).jpg" /></a> </div>
+  <div class="two"> <a href="#"><img src="image/one1 (4).jpg" /></a> </div>
+  </div>
+</div>
+</body>
+</html>

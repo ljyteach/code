@@ -1,0 +1,10 @@
+1、图片的容器需要设置样式 position: relative;
+2、#mlens_target_1{top:0 !important;left:300px !important;}可以设置放大内容的位置。
+3、参数
+imgSrc: "images/big.jpg",	    // 大图的路径
+lensShape: "square",			// 显示的形状(circle圆形/square方形)
+lensSize: 280,					// 显示的尺寸（像素）
+borderSize: 1,					// 边框尺寸（像素）
+borderColor: "#fff",			// 边框的颜色
+borderRadius: 0,				// 边框的圆角
+zoomLevel: 1                    // 放大比例

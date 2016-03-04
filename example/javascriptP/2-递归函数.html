@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+//递归函数
+
+//练习：阶乘函数n!=1×2×3×...×n
+
+function getValue(n){
+	var result = 1
+	for(var i = 1; i<=n; i++){
+		result *= i;
+	}
+	return result;
+}
+console.log(getValue(10));
+
+//通过递归函数来实现上面的例子。
+
+function getAValue(n){
+	if(n==1){
+		return n;
+	}else{
+		return n * getAValue(n - 1);
+	}
+}
+console.log(getAValue(10))
+
+</script>
+</body>
+</html>

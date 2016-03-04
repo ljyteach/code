@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+//回调函数：把一个函数作为一个参数传给另外一个函数或方法。
+
+var cat = {
+	name:"喵喵",
+	age:2,
+	interest:"吃老鼠",
+	sayName:function(){
+		console.log("我是"+this.name)
+	},
+	introduce:function(fun){
+		fun();
+	}
+};
+
+cat.introduce(function(){
+	console.log("我是"+ cat.name +",我今年"+cat.age+"岁了，我喜欢"+cat.interest);  //匿名函数中的this指向window对象
+});
+
+//最常见的回调函数
+$().click(function(){
+	//触发事件执行的代码
+})
+
+
+</script>
+
+</body>
+</html>

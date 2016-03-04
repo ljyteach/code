@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+
+<style type="text/css">
+*{padding:0; margin:0;}
+a img{border:none;}
+ul, li{ list-style:none; }
+div#picQh { width:670px; height:329px; overflow:hidden; position:relative; }
+div#picQh #pic{
+	width:3350px;
+}
+div#picQh #pic li{ float:left; }
+
+ul#picNav {
+	position:absolute;
+	z-index:999999;
+	top:296px;
+	left:559px;
+	width:200px;
+}
+ul#picNav li{float:left; margin:1px; width:14px; height:14px; background:#EEE; font-size:11px; text-align:center; cursor:pointer; }
+ul#picNav li.active {background:#F33}
+</style>
+
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	num = 0;
+	t=setInterval(autoChange,2000);
+	function autoChange(){
+		num = (num==4)?0:++num;
+		$('#pic').animate({marginLeft: -670*num+'px'}, 500);//自动播放时图片滚动效果
+		//自动播放时导航效果
+		$('ul#picNav li:first').addClass('active');//导航效果初始化
+		$('ul#picNav li').removeClass('active');
+		$('ul#picNav li:eq('+num+')').addClass('active');
+	}
+	$('#picNav li').hover(function(){
+			clearInterval(t);				
+		},function(){
+			t=setInterval(autoChange,2000);
+		}).click(function(){
+			//clearInterval(t);
+			num = $(this).html()-1;
+			$('#pic').animate({marginLeft: -670*num+'px'}, 500);	
+			$('ul#picNav li').removeClass('active');
+			$(this).addClass('active');
+		})
+		
+	/*function changePic(num){
+	//	num = (num==4)?0;++num;
+		clearInterval(t);
+		$('#pic').animate({marginLeft: -670*num+'px'}, 500);
+
+	}*/
+})
+</script>
+</head>
+
+<body>
+<div id="picQh">
+  <ul id="pic">
+    <li><img src="pic/gracetan_01.jpg" width="670" height="329" /></li>
+    <li><img src="pic/gracetan_02.jpg" width="670" height="329" /></li>
+    <li><img src="pic/gracetan_03.jpg" width="670" height="329" /></li>
+    <li><img src="pic/gracetan_04.jpg" width="670" height="329" /></li>
+    <li><img src="pic/gracetan_05.jpg" width="670" height="329" /></li>
+  </ul>
+  <ul id="picNav" name="picNav">
+    <li id="b1" >1</li>
+    <li id="b2">2</li>
+    <li id="b3" >3</li>
+    <li id="b4">4</li>
+    <li id="b5">5</li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+role:主要是支持一些读屏设备。比如盲人，正常页面可不加可以不加。
+aria-*：主要是支持一些读屏设备。比如盲人，正常页面可不加可以不加。
+.sr-only是 除了屏幕阅读器外，其他设备上隐藏该元素，
+这个是用于屏幕阅读器的，帮助残障人士更好的访问网站。
+
+class设置样式
+data-*控制插件
+data-toggle:实现什么样的效果
+            collapse 导航条隐藏时出现
+            dropdown 下拉菜单
+            modal 模态框
+
+
+data属性：可以在不适用javascript代码的情况下实现插件的功能。
+
+<li class="divider"></li>分隔线
+
+
+<span class="caret"></span> 小三角
+放在dropdown容器中 三角向下 
+放在dropup容器中 三角向上

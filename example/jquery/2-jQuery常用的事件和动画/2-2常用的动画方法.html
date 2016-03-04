@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+div{width:100px;height:100px;background:red;}
+</style>
+<script type="text/javascript" src="jquery-1.11.1.js"></script>
+<script type="text/javascript">
+$(function(){
+	//显示元素
+	$("#show").click(function(){
+		$("div").stop().show(1000);
+	})
+	
+	//隐藏元素
+	$("#hide").click(function(){
+		$("div").stop().hide(1000,function(){alert("div已经隐藏！")});   //注意元素的display属性
+	})
+	
+	//停止动画
+	$("#stop").click(function(){
+		$("div").stop();
+	})
+	
+	//逐渐出现
+	$("#fadeIn").click(function(){
+		$("div").fadeIn(1000);
+	})
+	
+	//逐渐消失
+	$("#fadeOut").click(function(){
+		$("div").fadeOut(1000);
+	})
+	
+	//上卷
+	$("#slideUp").click(function(){
+		$("div").slideUp(1000);
+	})
+	
+	//展开
+	$("#slidDown").click(function(){
+		$("div").slideDown(1000);
+	})
+	
+	//自定义动画
+	var n = 0;
+	$("#animate").click(function(){
+		if(n++%2==0){
+	    $("div").animate({"width":"500px","height":"200px"},1000)
+		}
+		else{
+		$("div").animate({"width":"100px","height":"100px"},1000)
+		}
+	})
+	
+	//多重自定义动画  delay()动画延时执行
+	$("#animate2").click(function(){
+		if(n++%2==0){
+	    $("div").animate({"width":"500px","height":"200px"},1000).delay(2000).animate({"margin-left":"500px"},1000);
+		}
+		else{
+		//参数添加回调函数
+		$("div").animate({"width":"100px","height":"100px"},1000).animate({"margin-left":"0"},1000,function(){alert("动画执行完毕！")});
+		$(":animated").css({"background":"blue"});
+		}
+	})
+	
+	//toggle()切换元素的可见性
+	$("#toggle").click(function(){
+		$("div").toggle(1000);
+	})
+	
+	//slideToggle()切换元素的可见性
+	$("#slideToggle").click(function(){
+		$("div").slideToggle(1000);
+	})
+	
+	//fadeToggle()切换元素的可见性
+	$("#fadeToggle").click(function(){
+		$("div").fadeToggle(1000);
+	})
+	
+	//fadeTo()切换元素的可见性
+	$("#fadeTo").click(function(){
+		$("div").fadeTo(1000,0.2);
+	})
+})
+</script>
+</head>
+<body>
+<input id="show" type="button" value="显示" />
+<input id="hide" type="button" value="隐藏" />
+<input id="stop" type="button" value="停止" />
+<input id="fadeIn" type="button" value="逐渐出现" />
+<input id="fadeOut" type="button" value="逐渐消失" />
+<input id="slideUp" type="button" value="上卷" />
+<input id="slidDown" type="button" value="展开" />
+<input id="animate" type="button" value="自定义动画" />
+<input id="animate2" type="button" value="多重自定义动画" />
+<input id="toggle" type="button" value="切换可见性" />
+<input id="slideToggle" type="button" value="slide切换可见性" />
+<input id="fadeToggle" type="button" value="fade切换可见性" />
+<input id="fadeTo" type="button" value="fadeTo透明度调整" />
+<div></div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<ul>
+	<li class="list">1</li>
+	<li class="list">2</li>
+	<li class="list">3</li>
+	<li class="list">4</li>
+	<li class="list">5</li>
+</ul>
+
+<script type="text/javascript">
+//闭包：有权访问另一个函数作用域中变量的函数。在函数中创建另一个函数就会创建闭包。
+
+//普通的函数
+
+//声明一个函数，函数内的代码不执行。
+function fun(){
+	var str = "helloWorld";
+	console.log(str);
+}
+
+//调用这个函数，执行函数内的代码，执行完成后，销毁函数中的代码。
+//fun();
+
+//console.log(str)  //报错，str在函数执行完成后就被销毁了。
+
+
+function outFun(){
+	var out = "hello";
+	function inFun(){
+		return out;
+	}
+	return inFun;
+}
+
+//内部函数没有执行完，外部函数内的内容不会被销毁。
+var inF = outFun();
+var str = inF();
+console.log(str);
+
+//一个简单的例子
+function createFun(){
+	var arr = [];
+	for(var i = 0; i<10; i++){
+		arr[i] = function(){
+			return i;
+		}
+	}
+	return arr;
+}
+
+//改写
+function createFun(){
+	var arr = [];
+	for(var i = 0; i<10; i++){
+		arr[i] = (function(i){
+			return function(){
+				return i;
+			}
+		})(i)
+	}
+	return arr;
+}
+
+var arr = createFun();
+var num = arr[1]();
+console.log(num);
+
+//实例：事件触发不能输出索引
+// var oList = document.getElementsByClassName("list");
+// for(var i = 0; i<oList.length; i++){
+// 	oList[i].onclick = function(){
+// 		console.log(i);
+// 	}
+// }
+
+var oList = document.getElementsByClassName("list");
+for(var i = 0; i<oList.length; i++){
+	oList[i].onclick = (function(i){
+		return function(){
+			console.log(i);
+		}
+	})(i)
+}
+
+
+</script>
+
+</body>
+</html>

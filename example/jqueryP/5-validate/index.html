@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+#myForm p span{color:#f00;font-size:12px;}
+</style>
+
+</head>
+<body>
+<form id="myForm" method="get" action="">
+	<p>
+		<label for="firstname">姓</label>
+		<input id="firstname" name="firstname" />
+	</p>
+    <p>
+		<label for="lastname">名</label>
+		<input id="lastname" name="lastname" />
+	</p>
+	<p>
+		<label for="email">邮箱</label>
+		<input id="email" name="email" />
+	</p>
+    <p>
+		<label for="number">数字</label>
+		<input id="number" name="number" />
+	</p>
+    <p>
+		<label for="phoneNum">电话</label>
+		<input id="phoneNum" name="phoneNum" />
+	</p>
+	<p>
+		<label for="password">密码</label>
+		<input id="password" name="password" type="password" />
+	</p>
+	<p>
+		<label for="rpassword">确认密码</label>
+		<input id="rpassword" name="rpassword" type="password" />
+	</p>
+	<p>
+		<input class="submit" type="submit" value="Submit"/>
+	</p>
+</form>
+<script type="text/javascript" src="jquery-1.11.1.js"></script>
+<script type="text/javascript" src="jquery.validate.js"></script>
+<script type="text/javascript" src="jquery.validate-zh.js"></script>
+<script type="text/javascript">
+
+	$("#myForm").validate({
+			errorElement: 'span',
+			rules:{
+				firstname:{
+					maxlength: 2,     //字符最大长度
+					required: true    //必须填写
+				},
+				lastname:{
+					minlength: 2,     //字符最小长度
+					required: true
+				},
+				email:{
+					required: true,
+					email: true       //匹配邮箱地址格式
+				},
+				number: {
+					required: true,
+					number: true,
+					max:100,    //最大值
+					min:10      //最小值
+				},
+				phoneNum:{
+					required: true,
+					minlength: 11,
+					maxlength: 11
+				},
+				password: {           
+					minlength: 5,
+					required: true
+				},
+				rpassword: {        
+					minlength: 5,
+					required: true,
+					equalTo: "#password"    //匹配与xxxid元素相同的value
+				}, 
+			},
+			messages:{
+				firstname:{
+					required:"这个必须填！！！！！！！！！！"
+				},
+				phoneNum:{
+					minlength : "请输入正确的手机号码！",
+					maxlength : "请输入正确的手机号码！"
+				}
+			}
+		});
+
+</script>
+</body>
+</html>

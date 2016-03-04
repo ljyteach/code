@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+*{margin:0;padding:0;}
+#list,#pic{float:left}
+#list{width:200px;height:500px;}
+#list img{width:200px;height:100px;}
+#pic{width:1000px;height:500px}
+#pic img{width:1000px;height:500px;}
+</style>
+<script type="text/javascript" src="jquery-1.11.1.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#list img").mouseover(function(){
+		var src = this.src;
+		$("#pic img").stop().fadeOut(200,function(){
+			this.src = src;
+			$(this).fadeIn(200);
+		});
+	})
+})
+</script>
+</head>
+
+<body>
+<div>
+  <div id="list">
+    <ul>
+     <li><a><img src="gracetan_01.jpg" /></a></li>
+     <li><a><img src="gracetan_02.jpg" /></a></li>
+     <li><a><img src="gracetan_03.jpg" /></a></li>
+     <li><a><img src="gracetan_04.jpg" /></a></li>
+     <li><a><img src="gracetan_05.jpg" /></a></li>
+    </ul>
+  </div>
+  <div id="pic">
+    <img src="gracetan_01.jpg" />
+  </div>
+</div>
+</body>
+</html>

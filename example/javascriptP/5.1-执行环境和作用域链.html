@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+
+//函数会创建一个执行环境，当前执行环境的变量存储在这个执行环境的变量对象中，变量对象无法访问。
+//当前执行环境中可以访问上一级执行环境的变量，不能访问下一级执行环境的变量
+//执行环境中所有代码运行完毕后，该环境会被销毁，全局环境会在关闭浏览器时销毁。
+
+//访问上一级执行环境中的变量。
+var color = "red";
+
+function getColor1(){
+	return color;
+}
+console.log(getColor1());
+
+//访问当前执行环境中的变量。
+function getColor2(){
+	var color;
+	color = "blue";
+	return color;
+}
+console.log(color);
+console.log(getColor2());
+
+</script>
+
+</body>
+</html>

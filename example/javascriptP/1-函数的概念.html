@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+//函数时可执行的语句块，声明函数时不执行，调用函数时才执行。
+//某一个对象的属性是一个函数的时候，我们叫这个函数为这个对象的方法。
+//函数名、参数、返回值都是可有可无的。
+
+//匿名函数：没有函数名的函数。
+//function(){
+	//console.log("匿名函数");
+//}
+
+
+//函数声明提升
+sayName();
+function sayName(){
+	console.log("我是小明")
+}
+
+//函数表达式
+//sayAge();
+var sayAge = function(){
+	console.log("我今年18岁");
+}
+sayAge();
+
+//返回值
+function returnValue(){
+	console.log("第一行");
+	return
+	console.log("第二行");  //这行代码永远不会执行
+}
+returnValue();
+
+//参数arguments
+function arg(x,y){
+	//return x + y;
+	console.log(arguments.length)
+	return arguments[0] + arguments[1];  //同样会返回x,y的和
+}
+console.log(arg(3,4))
+
+//练习：如果输入一个数字，计算这个数字的平方，如果输入两个数字，计算两个数的乘积。
+function count(){
+	if(arguments.length == 1){
+		return arguments[0] * arguments[0];
+	}else if(arguments.length == 2){
+		return arguments[0] * arguments[1];
+	}
+}
+console.log(count(3,4));
+
+
+//练习:输入一个参数，返回这个参数本身，输入多个参数，返回所有参数的乘积.
+function countPlus(){
+	var result = 1;
+	for(var i = 0;i<arguments.length;i++){
+		result *= arguments[i]
+	}
+	return result;
+}
+console.log(countPlus(3,2,7,100));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

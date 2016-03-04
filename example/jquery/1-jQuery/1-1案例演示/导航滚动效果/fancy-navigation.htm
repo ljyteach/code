@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Fancy Navigation with CSS &amp; jQuery - Tutorial by Soh Tanaka</title>
+
+<style type="text/css">
+html {	background: #1d1d1d; }
+body {
+	margin: 0; padding: 0;
+	font: 10px normal Verdana, Arial, Helvetica, sans-serif;
+	background: #1d1d1d; 
+}
+h1 {
+	font: 4.7em normal Georgia, 'Times New Roman', Times, serif;
+	color: #fff;
+	margin: 0;
+	text-align: center;
+	padding: 5px 0;
+}
+h1 small{
+	font: 0.2em normal Verdana, Arial, Helvetica, sans-serif;
+	text-transform:uppercase;
+	letter-spacing: 1.4em;
+	display: block;
+	color: #ccc;
+}
+.container {
+	width: 520px;
+	height: 330px;
+	position: absolute;
+	top: 50%; left: 50%;
+	margin: -165px 0 0 -210px;
+	overflow: hidden;
+}
+img {border: none;}
+ul#topnav {
+	margin: 10px 0 20px; 
+	padding: 0; 
+	list-style: none;	
+	font-size: 1.1em;
+	clear: both;
+	float: left;
+	width: 520px;
+}
+ul#topnav li{
+	margin: 0; 
+	padding: 0; 
+	overflow: hidden; 
+	float: left; 
+	height:40px;
+}
+ul#topnav a, ul#topnav span {
+	padding: 10px 20px; 
+	float: left; 
+	text-decoration: none; 
+	color: #fff;
+	text-transform: uppercase;
+	clear: both;
+	height: 20px;
+	line-height: 20px;
+	background: #1d1d1d; 
+}
+ul#topnav a {	color: #7bc441; }
+ul#topnav span {
+	display: none;
+}
+
+ul#topnav.v2 span{
+	background: url(a_bg.gif) repeat-x left top;
+}
+ul#topnav.v2 a{
+	color: #555;
+	background: url(a_bg.gif) repeat-x left bottom;
+}
+</style>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">
+
+
+$(document).ready(function() {
+	
+	
+	$("#topnav li").prepend("<span></span>"); //Throws an empty span tag right before the a tag
+	
+	$("#topnav li").each(function() { //For each list item...
+		var linkText = $(this).find("a").html(); //Find the text inside of the a tag
+		$(this).find("span").show().html(linkText); //Add the text in the span tag
+	});
+	
+	$("#topnav li").hover(function() {	//On hover...
+		$(this).find("span").stop().animate({ 
+			marginTop: "-40" //Find the span tag and move it up 40 pixels
+		}, 250);
+	} , function() { //On hover out...
+		$(this).find("span").stop().animate({
+			marginTop: "0" //Move the span back to its original state (0px)
+		}, 250);
+	});
+	
+	
+});
+</script>
+</head>
+
+<body>
+
+<div class="container">
+	<h1>Fancy Navigation with<br />CSS &amp; jQuery <small>Tutorial by Soh Tanaka</small></h1>
+	
+	<ul id="topnav" class="v2">
+		<li><a href="http://www.sohtanaka.com/">Home</a></li>
+		<li><a href="http://www.sohtanaka.com/web-design/web-design-services.php">Services</a></li>
+		<li><a href="http://www.sohtanaka.com/web-design/designbombscom/">Portfolio</a></li>
+		<li><a href="http://www.sohtanaka.com/web-design-blog/">Blog</a></li>
+		<li><a href="http://www.sohtanaka.com/about/">About</a></li>
+		<li><a href="http://www.sohtanaka.com/contact/">Contact</a></li>
+	</ul>
+	
+	<ul id="topnav">
+		<li><a href="http://www.sohtanaka.com/">Home</a></li>
+		<li><a href="http://www.sohtanaka.com/web-design/web-design-services.php">Services</a></li>
+		<li><a href="http://www.sohtanaka.com/web-design/designbombscom/">Portfolio</a></li>
+		<li><a href="http://www.sohtanaka.com/web-design-blog/">Blog</a></li>
+		<li><a href="http://www.sohtanaka.com/about/">About</a></li>
+		<li><a href="http://www.sohtanaka.com/contact/">Contact</a></li>
+	</ul>
+	
+
+	<div style="clear: both; display: block; color: #888; text-align:center; padding-top: 20px;"><a href="http://www.sohtanaka.com/web-design/animate-navigation-with-css-jquery/" style="color: #fff;">Fancy Navigation with CSS &amp; jQuery</a> by Soh Tanaka.<br />Check out his <a href="http://www.sohtanaka.com/web-design-blog/" style="color: #fff;">Web Design Blog</a> for more tutorials!</div> 
+</div>
+
+</body>
+</html>

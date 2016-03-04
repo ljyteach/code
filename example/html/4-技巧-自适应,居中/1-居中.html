@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>居中</title>
+    <style type="text/css">
+      *{
+        margin:0;
+        padding:0;
+      }
+      .div-center{
+        text-align: center;/*居中文本,或行内元素*/
+      }
+      .box{
+        width:960px;
+        height: 200px;
+        background-color: #888;
+        margin:0 auto;/*定宽块元素居中*/
+        margin-bottom: 10px;
+      }
+      .no-width{
+        height: 200px;
+        background-color: #888;
+      }
+      .list-box{
+        margin:0 auto;
+      }
+      .list li{
+        list-style: none;
+        float: left;
+        margin-left:10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>文本或行内元素的水平居中,可以设置父级text-align: center;</h3>
+    <div class="div-center">
+      一个居中的段落
+    </div>
+    <div class="div-center">
+      <img src="../1-html&css/images/1.jpg" alt="" />
+    </div>
+    <div class="div-center">
+        <a href="http://baidu.com">百度</a>
+    </div>
+    <h3>定宽块元素水平居中,可以通过设置margin:0 auto;</h3>
+    <div class="box">
+
+    </div>
+    <table class="list-box">
+      <tr>
+        <td>
+          <ul class="list">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+          </ul>
+        </td>
+      </tr>
+    </table>
+
+  </body>
+</html>

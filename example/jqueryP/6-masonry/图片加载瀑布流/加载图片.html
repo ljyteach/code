@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="style.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>  
+  <div id="container">
+  
+     <div class="box">
+         <img src="images/0.jpg" />
+     </div>
+     <div class="box">
+         <img src="images/1.jpg" />
+     </div>
+     <div class="box">
+         <img src="images/2.jpg" />
+     </div><div class="box">
+         <img src="images/3.jpg" />
+     </div>
+     <div class="box">
+         <img src="images/4.jpg" />
+     </div>
+     <div class="box">
+         <img src="images/3.jpg" />
+     </div>
+     <div class="box">
+         <img src="images/6.jpg" />
+     </div>
+     <div class="box">
+         <img src="images/7.jpg" />
+     </div>
+     <div class="box">
+         <img src="images/0.jpg" />
+     </div>
+     <div class="box">
+         <img src="images/1.jpg" />
+     </div>
+     <div class="box">
+         <img src="images/2.jpg" />
+     </div><div class="box">
+         <img src="images/3.jpg" />
+     </div>
+     <div class="box">
+         <img src="images/4.jpg" />
+     </div>
+     <div class="box">
+         <img src="images/3.jpg" />
+     </div>
+     <div class="box">
+         <img src="images/6.jpg" />
+     </div>
+     <div class="box">
+         <img src="images/7.jpg" />
+     </div><div class="box">
+         <img src="images/0.jpg" />
+     </div>
+     <div class="box">
+         <img src="images/1.jpg" />
+     </div>
+     <div class="box">
+         <img src="images/2.jpg" />
+     </div><div class="box">
+         <img src="images/3.jpg" />
+     </div>
+     <div class="box">
+         <img src="images/4.jpg" />
+     </div>
+     <div class="box">
+         <img src="images/3.jpg" />
+     </div>
+     <div class="box">
+         <img src="images/6.jpg" />
+     </div>
+     <div class="box">
+         <img src="images/7.jpg" />
+     </div>
+    
+  </div>
+  <script type="text/javascript" src="jquery-1.11.1.js"></script>
+<script type="text/javascript" src="masonry.pkgd.js"></script>
+<script type="text/javascript">
+    var $container = $('#container');
+
+    function picMaker(){
+        var imgRan = Math.floor(Math.random()*11);
+        var colRan = Math.floor(Math.random()*3+2);
+        var img = "<img src='images/" + imgRan + ".jpg' />";
+        var box = "<div class='box col" + colRan + "'>" + img + "</div>"
+        return box;
+    }
+    
+    $(window).scroll(function(){
+        var winHei = $(window).height();
+        var docHei = $(document).height();
+        var scrTop = $(this).scrollTop();
+        if(scrTop + winHei>docHei - 200){
+            var $boxes = $( picMaker() );
+            $container.append( $boxes ).masonry( 'appended', $boxes );
+        }
+    })
+    
+    $container.masonry({
+      itemSelector: '.box',
+      columnWidth: 192,
+    });
+
+
+</script>
+</body>
+
+</html>

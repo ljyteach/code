@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		#big-box{
+			width:500px;
+			height:500px;
+			margin-left:50px;
+			border:1px solid red;
+		}
+		.abs-box{
+			width:100px;
+			height:100px;
+			position: absolute;
+		}
+		.box1{
+			background-color: red;
+			top:0px;
+			left:0px;
+			z-index: 999
+		}
+		.box2{
+			background-color: blue;
+			top:50px;
+			left:50px;
+			z-index: 0
+		}
+	</style>
+</head>
+<body>
+	<div id="big-box">
+		<div class="abs-box box1"></div>
+		<div class="abs-box box2"></div>
+	</div>
+</body>
+</html>

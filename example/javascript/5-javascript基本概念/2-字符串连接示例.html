@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+姓名
+<input type="text" id="str1" />
+年龄
+<input type="text" id="str2" />
+
+<br />
+<input type="button" id="btn" value="计算" />
+
+<script type="text/javascript">
+//问题：看到一个功能不知从何入手。所以需要讲解分析过程。
+
+//获取dom对象。
+var oStr1 = document.getElementById("str1");
+var oStr2 = document.getElementById("str2");
+var oBtn = document.getElementById("btn");
+
+
+//计算结果
+oBtn.onclick = function(){
+	//获取num1 num2两个input对象的value属性。
+	var vStr1 = oStr1.value;
+	var vStr2 = oStr2.value;
+	var result = "我是"+vStr1+",今年"+ vStr2+"岁了！";  
+	alert(result);
+}
+
+
+</script>
+</body>
+</html>

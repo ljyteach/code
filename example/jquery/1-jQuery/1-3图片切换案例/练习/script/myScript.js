@@ -1,0 +1,12 @@
+$("#one").click(function(){
+	$("#pic").attr("src","img/1.jpg");
+});
+$("#one").click(function(){
+	$("#pic").attr("src","img/1.jpg");
+});
+$("#one").click(function(){
+	$("#pic").attr("src","img/1.jpg");
+});
+$("#one").click(function(){
+	$("#pic").attr("src","img/1.jpg");
+});

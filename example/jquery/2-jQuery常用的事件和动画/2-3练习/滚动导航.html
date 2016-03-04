@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+*{margin:0;padding:0;}
+ul{list-style:none}
+li{float:left;width:70px;height:40px;background:#ff0;overflow:hidden;line-height:40px; text-align:center;}
+a{display:block;width:70px;height:40px;line-height:40px;text-align:center;background:#ff0}
+span{display:block;width:70px;height:40px;background:#eee;}
+</style>
+<script type="text/javascript" src="jquery-1.11.1.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("div").hover(function(){
+		$(this).stop().animate({"margin-top":"-40px"},500);
+		},function(){
+		$(this).stop().animate({"margin-top":"0px"},500);
+		})
+})
+</script>
+</head>
+
+<body>
+<ul>
+  <li>
+    <div>
+    <span>home</span>
+    <a>home</a>
+    </div>
+  </li>
+  <li>
+  <div>
+    <span>movie</span>
+    <a>movie</a>
+    </div>
+  </li>
+  <li>
+  <div>
+    <span>news</span>
+    <a>news</a>
+    </div>
+  </li>
+  <li>
+  <div>
+    <span>picture</span>
+    <a>picture</a>
+    </div>
+  </li>
+</ul>
+</body>
+</html>

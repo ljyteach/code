@@ -1,0 +1,36 @@
+#picBox{
+	position:relative;
+	width:670px;
+	height:329px;
+}
+#numList{
+	position:absolute;
+	top:280px;
+	left: 250px;
+	z-index:9999;
+	list-style: none;
+}
+#numList li{
+	float:left;
+	height:15px;
+	width:15px;
+	background-color: #ff0;
+	border-radius: 10px;
+	margin-left: 5px;
+	cursor: pointer;
+}
+#numList .active{
+	background-color: #990000;
+}
+#left{
+	position:absolute;
+	top:140px;
+	left:12px;
+	z-index:9999;
+}
+#right{
+	position: absolute;
+	top:140px;
+	right:10px;
+	z-index:9999;
+}

@@ -1,0 +1,28 @@
+特效 fx属性
+	cycle('blindX');
+	cycle('blindY')
+	cycle('curtainX')
+	cycle('fade')  
+	cycle('fadeZoom')
+	cycle('growX')
+	cycle('scrollUp')
+	cycle('scrollHorz')
+	cycle('scrollVert')   
+	cycle('shuffle')
+	cycle('slideX')
+	cycle('slideY')
+	cycle('toss')
+	cycle('turnUp')
+	cycle('wipe')
+	cycle('zoom')
+	cycle('fade')
+
+fx：特效  图片切换的效果
+before：函数  切换图片前执行 
+after：函数 切换图片后执行
+timeout：数字 切换间隔时间
+speed：数字  切换速度
+
+cycle("next") 下一张
+cycle("prev") 上一张
+cycle(index)  切换至某一张

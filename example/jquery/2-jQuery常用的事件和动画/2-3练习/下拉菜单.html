@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+*{margin:0;padding:0;}
+ul{list-style:none;background:#eee;}
+.list{display:none;}
+.nav{float:left;width:100px;height:30px;background:#f00; text-align:center;line-height:30px;}
+a{display:block;width:100px;height:30px;}
+</style>
+<script type="text/javascript" src="jquery-1.11.1.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".nav").hover(function(){
+			$(this).find(".list").stop().slideDown(500);    //find方法  next方法讲解；
+		},function(){
+			$(this).find(".list").stop().slideUp(500);
+		})
+})
+</script>
+</head>
+
+<body>
+<ul id="nav">
+	<li class="nav">
+      <a>书籍</a>
+      <ul class="list">
+      	<li>教科书</li>
+        <li>历史</li>
+        <li>宗教</li>
+        <li>人物传记</li>
+      </ul>
+    </li>
+    <li class="nav">
+      <a>鞋子</a>
+      <ul  class="list">
+      	<li>运动鞋</li>
+        <li>雨鞋</li>
+        <li>皮鞋</li>
+        <li>高跟鞋</li>
+      </ul>
+    </li>
+    <li class="nav">
+      <a>服装</a>
+      <ul class="list">
+      	<li>儿童服</li>
+        <li>运动服</li>
+        <li>西装</li>
+        <li>卫衣</li>
+      </ul>
+    </li>
+</ul>
+</body>
+</html>

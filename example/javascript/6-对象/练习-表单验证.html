@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+div{margin-top:30px;}
+
+</style>
+<script type="text/javascript" src="script/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+$(function(){
+	function setp(str){
+		$("p").html(String(str))
+	}
+	function checkMail(str){
+		var re = /^[\w\.]+@[\w\.]+\.[0-9a-zA-Z]{2,4}$/;
+		//alert(re.exec(str));
+		return re.test(str);
+		
+	}
+	function checkCellphone(str){
+		//var re = /^\d{11}$/;
+		var re =/^1[35]\d{9}$/
+		return re.test(str);
+	}
+	function checkPhone(str){
+		var re = /^\d{3,4}\-\d{7,8}$/
+		return re.test(str);
+	}
+	function checkDate(str){
+		//var re = /^\d{4}\-[0][1-9]|[1][012]\-[0][1-9]|[12][0-9]|[3][01]$/
+		var re = /^\d{4}\-\d{2}-\d{2}$/
+		//var re = /^\d{4}\-[0][1-9]|[1][012]\-[0][1-9]|[12][0-9]|[3][01]$/
+		setp(re.exec(str))
+		return re.test(str);
+	}
+	function checkPsw(str){
+		var re = /^[a-zA-z][\@A-Za-z0-9\!\#\$\%\^\&\*\.\~]{5,22}$/
+		setp(re.exec(str))
+		return re.test(str);
+	}
+	
+	$("#email input").blur(function(){
+		if(!checkMail(this.value)){
+			$("#email span").html("<span style='color:#f00'>请输入正确的邮箱格式</span>")
+		}else{
+			$("#email span").html("<span style='color:#0f0'>格式正确</span>")
+		}
+	})
+	$("#cellphone input").blur(function(){
+		if(!checkCellphone(this.value)){
+			$("#cellphone span").html("<span style='color:#f00'>请输入正确的手机格式</span>")
+		}else{
+			$("#cellphone span").html("<span style='color:#0f0'>格式正确</span>")
+		}
+	})
+	$("#phone input").blur(function(){
+		if(!checkPhone(this.value)){
+			$("#phone span").html("<span style='color:#f00'>请输入正确的电话格式</span>")
+		}else{
+			$("#phone span").html("<span style='color:#0f0'>格式正确</span>")
+		}
+	})
+	$("#psw input").blur(function(){
+		if(!checkPsw(this.value)){
+			$("#psw span").html("<span style='color:#f00'>请输入正确的密码格式</span>")
+		}else{
+			$("#psw span").html("<span style='color:#0f0'>格式正确</span>")
+		}
+	})
+	$("#date input").blur(function(){
+		if(!checkDate(this.value)){
+			$("#date span").html("<span style='color:#f00'>请输入正确的日期格式</span>")
+		}else{
+			$("#date span").html("<span style='color:#0f0'>格式正确</span>")
+		}
+	})
+})
+</script>
+</head>
+<body>
+  <form>
+    <div id="phone">
+    座机
+      <input type="text" />
+      <span></span>
+    </div>
+    <div id="cellphone">
+    电话
+      <input type="text" />
+      <span></span>
+    </div>
+    <div id="psw">
+    密码
+      <input type="text" />
+      <span></span>
+    </div>
+    <div id="email">
+    email
+      <input type="text" />
+      <span></span>
+    </div>
+    <div id="date">
+    日期
+      <input type="text" />
+      <span></span>
+    </div>
+  </form>
+  <p></p>
+</body>
+</html>

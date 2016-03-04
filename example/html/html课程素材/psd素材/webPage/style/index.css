@@ -1,0 +1,211 @@
+*{
+	margin:0;
+	padding:0;
+}
+@font-face { 
+	font-family: chuntfive;/*定义font的名字*/ 
+	src:url(../font/Chunkfive.otf);/*把下载的字体文件引入进来*/ 
+} 
+@font-face { 
+	font-family:helvetiva;/*定义font的名字*/ 
+	src:url(../font/helvetiva.otf);/*把下载的字体文件引入进来*/ 
+} 
+@font-face { 
+	font-family:droidserif;/*定义font的名字*/ 
+	src:url(../font/DroidSerif-Italic.ttf);/*把下载的字体文件引入进来*/ 
+}
+.clear{clear:both;}
+.header{
+	height:80px;
+}
+.header-con{
+	width:960px;
+	margin:0 auto;
+	height:80px;
+}
+.logo{
+	width:179px;
+	height:80px;
+	float: left;
+}
+.nav{
+	float:left;
+}
+.nav ul{
+	list-style: none;
+	margin-left:10px;
+}
+.nav ul li{
+	float:left;
+	height:80px;
+	margin-left:30px;
+	font-size:18px;
+	line-height:80px;
+}
+.nav ul li a{
+	color:#2e2d3d;
+	font-family:helvetiva;
+	text-decoration:none;
+}	
+.nav ul li a:hover{
+	border-bottom:4px solid #2e2d2d
+	
+}
+.banner{
+	height:640px;
+}
+.banner-con{
+	height:640px;
+	width:960px;
+	margin:0 auto;
+	position:relative;
+}
+.banner-left{
+	position:absolute;
+	top:200px;
+	left:-80px;
+}
+.banner-right{
+	position:absolute;
+	top:200px;
+	left:1010px;
+}
+.box-left{
+	width:550px;
+	float:left;
+	padding-top:60px;
+	padding-left:10px
+}
+.box-left h2{
+	font-size: 48px;
+	font-family:chuntfive;
+}
+.box-left p{
+	font-size: 18px;
+	line-height: 30px;
+	margin-top:30px;
+	font-family:"Times New Roman", Times, serif;
+}
+.box-left-pic{
+	margin-top:80px;
+
+}
+.box-left-pic img{
+	display:block;
+	float:left;
+	margin-right:20px;
+}
+.box-right{
+	float:left;
+	margin-top:30px;
+}
+.banner-list{
+	list-style:none;
+	width:115px;
+	margin:30px auto;
+
+}
+
+.banner-list li{
+	float:left;
+	width:8px;
+	height:8px;
+	border:2px solid #cfcfcf;
+	margin-left:8px;
+	border-radius: 5px;
+}
+.banner-list .list-active{
+	border:2px solid #DB373B;
+	background-color: #DB373B;
+}
+.container{
+	height:389px;
+	background-image:url(../images/bg_con.png);
+}
+.container-con{
+	margin:0 auto;
+	width:960px;
+	height:389px;
+}
+
+.con-left{
+	color:#ececec;
+	width:570px;
+	float:left;
+}
+.con-left h2{
+	font-size: 24px;
+	font-family: chuntfive;
+	margin-top:47px;
+}
+.con-left .p1{
+	margin-top:36px;
+	font-family:droidserif;
+	font-size: 16px;
+	font-weight: bold;
+}
+.con-left .p2{
+	margin-top:36px;
+	font-family:"Times New Roman", Times, serif;;
+	font-size: 16px;
+	font-weight: bold;
+}
+.con-right{
+	margin-left:40px;
+	width:350px;
+	float:left;
+	color:#ececec;
+}
+.con-right h2{
+	font-size: 24px;
+	font-family: chuntfive;
+	margin-top:47px;
+}
+.con-right ul{
+	list-style: none;
+	margin-top:30px;
+}
+.con-right ul li{
+	margin-top:10px;
+}
+.con-right .aug{
+	display: block;
+	height:50px;
+	width:60px;
+	border-radius: 30px;
+	background-color: #333333;
+	text-align: center;
+	padding-top: 10px;
+	float: left;
+}
+.aug-con{
+	float: left;
+	width:240px;
+	margin-left:20px;
+	margin-top:10px;
+}
+.footer{
+	height:90px;
+	background-image:url(../images/bg_foot.png);
+}
+.footer-con{
+	width:960px;
+	margin:0 auto;
+}
+.footer p{
+	float:left;
+	height:90px;
+	line-height: 90px;
+	color:#ffffff;
+}
+.footer ul{
+	list-style: none;
+	float: right;
+}
+.footer ul li{
+	float: left;
+	color:#ffffff;
+	margin-right:22px;
+	height:90px;
+	line-height: 90px;
+}

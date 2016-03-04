@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#pic{
+
+		}
+		#picBox {
+			position: relative;
+
+		}
+		#mlens_target_0{
+			top:0 !important;
+			left:300px !important;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<img id="pic" src="images/thumb-1.jpg" alt="">
+	</div>
+	<div id="picBox">
+		<img id="motuo" src="images/small.jpg" alt="">
+	</div>
+	<script type="text/javascript" src="script/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="script/jquery.mlens-1.5.js"></script>
+	<script type="text/javascript">
+		$("#motuo").mlens({
+			imgSrc: "images/big.jpg",	    // 大图的路径
+			lensShape: "square",			// 显示的形状(circle圆形/square方形)
+			lensSize: 280,					// 显示的尺寸（像素）
+			borderSize: 1,					// 边框尺寸（像素）
+			borderColor: "#fff",			// 边框的颜色
+			borderRadius: 0,				// 边框的圆角
+			zoomLevel: 1                    // 放大比例
+		});
+		
+	</script>
+</body>
+</html>

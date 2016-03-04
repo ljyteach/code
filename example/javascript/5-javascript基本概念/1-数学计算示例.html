@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<input type="text" id="num1" />
++
+<input type="text" id="num2" />
+=
+<input type="text" id="result" />
+<br />
+<input type="button" id="btn" value="计算" />
+
+<script type="text/javascript">
+//问题：看到一个功能不知从何入手。所以需要讲解分析过程。
+
+//获取dom对象。
+var oNum1 = document.getElementById("num1");
+var oNum2 = document.getElementById("num2");
+var oResult = document.getElementById("result");
+var oBtn = document.getElementById("btn");
+
+
+//计算结果
+oBtn.onclick = function(){
+	//获取num1 num2两个input对象的value属性。
+	var vNum1 = oNum1.value;
+	var vNum2 = oNum2.value;
+	//var result = vNum1 + vNum2;  //未做类型转换
+	var result = Number(vNum1) + Number(vNum2);
+	oResult.value = result;
+}
+
+
+</script>
+</body>
+</html>

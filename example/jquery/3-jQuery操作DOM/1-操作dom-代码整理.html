@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+.del,.before,.after{color:red; cursor:pointer}
+</style>
+</head>
+
+<body>
+
+<input type="text" id="txt" />
+<input type="button" id="btnAp" value="子元素尾部添加节点" />
+<input type="button" id="btnPr" value="子元素首部添加节点" />
+
+<h3>你喜欢的水果</h3>
+<ul id="list">
+  <li>香蕉<span class="del"> 删除</span><span class="before"> 上添加</span><span class="after"> 下添加</span></li>
+  <li>苹果<span class="del"> 删除</span><span class="before"> 上添加</span><span class="after"> 下添加</span></li>
+  <li>鸭梨<span class="del"> 删除</span><span class="before"> 上添加</span><span class="after"> 下添加</span></li>
+</ul>
+
+<script type="text/javascript" src="jquery-1.11.1.js"></script>
+<script type="text/javascript">
+//重点：1函数提取代码公共的功能 2新添加的节点要重新绑定事件
+function createLi(){
+	var txt = $("#txt").val();
+	var del = $("<span class='del'> 删除</span>");
+	var before = $("<span class='before'> 上添加</span>");
+	var after = $("<span class='after'> 下添加</span>");
+	var li = $("<li></li>");
+	li.append(txt).append(del).append(before).append(after);
+	del.click(function(){
+		$(this).parent().remove();
+	})
+	before.click(function(){
+		$(this).parent().before(createLi(txt))
+	})
+	after.click(function(){
+		$(this).parent().after(createLi(txt))
+	})
+	return li;
+}
+
+$("#btnAp").click(function(){
+	var li = createLi();
+	$("#list").append(li);
+})
+$("#btnPr").click(function(){
+	var li = createLi();
+	$("#list").prepend(li);
+})
+$(".before").click(function(){
+	var li = createLi();
+	$(this).parent().before(li);
+})
+$(".after").click(function(){
+	var li = createLi();
+	$(this).parent().after(li);
+})
+$(".del").click(function(){
+	$(this).parent().remove();
+})
+
+</script>
+</body>
+</html>

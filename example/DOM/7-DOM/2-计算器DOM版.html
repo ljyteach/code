@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<input type="text" readonly="readonly" id="txt" />
+<div>
+<input type="button" class="num" value="0" />
+<input type="button" class="num" value="1" />
+<input type="button" class="num" value="2" />
+<input type="button" class="num" value="3" />
+<input type="button" class="num" value="4" />
+<input type="button" class="num" value="5" />
+<input type="button" class="num" value="6" />
+<input type="button" class="num" value="7" />
+<input type="button" class="num" value="8" />
+<input type="button" class="num" value="9" />
+</div>
+<div>
+<input type="button" class="sign" value="+" />
+<input type="button" class="sign" value="-" />
+<input type="button" class="sign" value="*" />
+<input type="button" class="sign" value="/" />
+</div>
+<div>
+<input type="button" id="result" value="=" />
+<input type="button" id="cancel" value="C" />
+</div>
+
+
+<script type="text/javascript">
+//首先讲解通过for语句为元素绑定事件
+
+var oTxt = document.getElementById("txt");
+var aNum = document.getElementsByClassName("num");
+var aSign = document.getElementsByClassName("sign");
+var oResult = document.getElementById("result");
+var oCancel = document.getElementById("cancel");
+
+var num1 = "";
+var num2 = "";
+var sign = "";
+
+for(var i = 0; i < aNum.length; i++){
+	aNum[i].onclick = function(){
+		if(sign == ""){
+			num1 += this.value;
+			oTxt.value = num1;
+		}else{
+			num2 += this.value;
+			oTxt.value = num2;
+		}
+	}
+}
+
+for(var i = 0;i<aSign.length;i++){
+	aSign[i].onclick = function(){
+		sign = this.value;
+	}
+}
+
+oResult.onclick = function(){
+	oTxt.value = count(Number(num1),Number(num2),sign)
+}
+
+function count(num1,num2,sign){
+	switch(sign){
+		case "+":return num1 + num2;break;
+		case "-":return num1 - num2;break;
+		case "*":return num1 * num2;break;
+		case "/":return num1 / num2;break;
+	}
+}
+
+oCancel.onclick = function(){
+	num1 = "";
+	num2 = "";
+	sign = "";
+	oTxt.value = "";
+}
+
+
+</script>
+</body>
+</html>

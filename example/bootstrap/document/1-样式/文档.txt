@@ -1,0 +1,28 @@
+引入bootstrap样式会覆盖标签默认样式。
+容器
+.container 类用于固定宽度并支持响应式布局的容器。
+.container-fluid 类用于 100% 宽度，占据全部视口（viewport）的容器。
+
+栅格系统
+行：row
+流式布局容器：.container-fluid
+列：xs 自动
+    sm >=750px 
+    md >=922px
+    lg >=1170px
+    浏览器大于最大宽度，列将水平排列
+
+表格
+table 
+table table-striped 斑马线
+table table-hover 改变悬浮状态
+table table-bordered 有border的表格
+表单
+form
+form-inline 内联表单
+   label:control-label
+.form-horizontal 空间组水平布局。
+
+div:input-group
+  div:input-group-addon
+

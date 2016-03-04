@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)http://mlens.musings.it/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+        <title>mlens magnifying glass jQuery plugin by musings.it</title>
+		<meta name="author" content="Federica Sibella - musings.it">
+		<meta name="description" content="mlens is the magnifying glass jQuery plugin by musings.it">
+		<meta name="keywords" content="magnifying glass, glass, zoom, lens, magnifying lens, plugin, jQuery plugin, zoom plugin, touch support, retina support, musings.it, Federica Sibella">
+		<link rel="stylesheet" href="./mlens magnifying glass jQuery plugin by musings.it_files/CSSreset.min.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="./mlens magnifying glass jQuery plugin by musings.it_files/style.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="./mlens magnifying glass jQuery plugin by musings.it_files/jquery.share.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="./mlens magnifying glass jQuery plugin by musings.it_files/divascookies_style_light_bottom.css" type="text/css" media="screen">
+		<link rel="icon" href="http://mlens.musings.it/images/favicon.ico" type="image/x-icon">
+    	<link rel="shortcut icon" href="http://mlens.musings.it/images/favicon.ico" type="image/x-icon">
+		<meta name="robots" content="index,follow">
+		<meta name="author" content="Federica Sibella - musings.it">
+		<meta name="geo.placename" content="via Generale Alberico Albricci 1, 24128 Bergamo, Italy">
+		<script async="" type="text/javascript" src="./mlens magnifying glass jQuery plugin by musings.it_files/ca-pub-9173495310740153.js"></script><script async="" src="./mlens magnifying glass jQuery plugin by musings.it_files/analytics.js"></script><script type="text/javascript" src="./mlens magnifying glass jQuery plugin by musings.it_files/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="./mlens magnifying glass jQuery plugin by musings.it_files/jquery.mlens-1.5.min.js"></script>
+		<script type="text/javascript" src="./mlens magnifying glass jQuery plugin by musings.it_files/jquery.share.min.js"></script>
+		<script type="text/javascript" src="./mlens magnifying glass jQuery plugin by musings.it_files/settings_en.js"></script>
+	</head> 
+	<body>
+		<header>
+			<div id="logo_wrapper">
+				<img id="lens" src="./mlens magnifying glass jQuery plugin by musings.it_files/lens200x200pxNoImg.png" alt="mlens logo">
+				<div id="logo">
+					<div id="mlens_wrapper_0" style="width: 300px;"><img id="mlens_logo" src="./mlens magnifying glass jQuery plugin by musings.it_files/mlens300px.png" alt="mlens logo" data-big="images/mlens600px.png" data-id="mlens_0"><div id="mlens_target_0" style="width: 110px; height: 110px; float: left; display: none; border: 3px solid rgb(136, 136, 136); position: absolute; border-radius: 58px; cursor: none; background-image: url(http://mlens.musings.it/images/mlens600px.png); background-size: 600px; background-position: 0px 0px; background-repeat: no-repeat;" class="">&nbsp;</div><img style="display: none; width: 600px; height: auto; max-width: none;" src="./mlens magnifying glass jQuery plugin by musings.it_files/mlens600px.png"></div>
+				</div>
+				<h1>jQuery plugin</h1>
+			</div>
+			<br class="esc">
+			<h2>the magnifying glass by <a href="http://www.musings.it/" target="_blank">musings.it</a></h2>
+		</header>
+		<section id="main">
+			<div id="green_wrapper">
+				<div id="mlens_wrapper_1" style="width: 640px;"><img id="green_monster" src="./mlens magnifying glass jQuery plugin by musings.it_files/GreenMonster.jpg" alt="green monster graffiti by Kotzian" data-big="images/GreenMonster_big.jpg" data-big2x="images/GreenMonster_big@2x.jpg" data-overlay="images/overlay.png" data-id="mlens_1"><div id="mlens_target_1" style="width: 180px; height: 180px; float: left; display: none; border: 4px solid rgb(255, 255, 255); position: absolute; border-radius: 94px; cursor: none; background-image: url(http://mlens.musings.it/images/GreenMonster_big.jpg); background-size: 1280px; background-position: 0px 0px; background-repeat: no-repeat;" class="">&nbsp;<div id="mlens_overlay_1" style="position: absolute; width: 100%; height: 100%; left: 0px; top: 0px; z-index: 1; -webkit-background-size: cover; border-radius: 94px; cursor: none; background-image: url(http://mlens.musings.it/images/overlay.png); background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;">&nbsp;</div></div><img style="display: none; width: 1280px; height: auto; max-width: none;" src="./mlens magnifying glass jQuery plugin by musings.it_files/GreenMonster_big.jpg"></div>
+			</div>	
+			<div id="real_time_testing">
+				<h2>Test the demo parameters</h2>
+				<form id="real_time_form">
+					<legend></legend>
+					<fieldset>
+						<label for="lensShape_param">lensShape [<i>circle</i> o <i>square</i>]:</label>
+						<select name="lensShape_param">
+							<option value="circle">circle</option>
+							<option value="square">square</option>
+						</select>
+						<br class="esc">
+						<label for="lensSize_param">lensSize [<i>px number</i>]:</label>
+						<input type="text" id="lensSize_param" name="lensSize_param" value="180">
+						<br class="esc">
+						<label for="borderSize_param">borderSize [<i>px number</i>]:</label>
+						<input type="text" id="borderSize_param" name="borderSize_param" value="4">
+						<br class="esc">
+						<label for="borderColor_param">borderColor [<i>hex value</i>]:</label>
+						<input type="text" id="borderColor_param" name="borderColor_param" value="#fff">
+						<br class="esc">
+						<span class="note">Only if <i>lensShape is square</i></span>
+						<label for="boderRadius_param">borderRadius [<i>px number</i>]:</label>
+						<input type="text" id="borderRadius_param" name="borderRadius_param" value="0">
+						<br class="esc">
+						<label for="zoomLevel_param">zoomLevel [<i>numero</i>]:</label>
+						<input type="text" id="zoomLevel_param" name="zoomLevel_param" value="1">
+						<br class="esc">
+						<input id="form_button_reset" type="reset" value="Values reset"> <input id="form_button" type="button" value="Apply changes">
+					</fieldset>
+					<div id="risposta"></div>
+				</form>
+			</div>
+			<br class="esc">
+			<div id="downloads">
+				<h2>Download jquery.mlens <i>v.1.5</i></h2>
+				<p>Version: <i>September 25th 2014</i></p>
+				<div>
+					<div class="trenta">
+						<a href="http://mlens.musings.it/downloads/jquery.mlens-1.5.min.js">
+							<h2>MIN</h2>
+							<p>6.19 Kb</p>
+						</a>
+					</div>
+					<div class="trenta">
+						<a href="http://mlens.musings.it/downloads/jquery.mlens-1.5.zip">
+							<h2>DEV</h2>
+							<p>15.6 Kb</p>
+						</a>
+					</div>
+					<div class="trenta_last">
+						<a href="http://mlens.musings.it/downloads/jquery.mlens-1.5.min.zip">		
+							<h2>MIN.ZIP</h2>
+							<p>2.03 Kb</p>
+						</a>
+					</div>
+					<br class="esc">
+				</div>
+			</div>
+			<br class="esc">
+			<div id="advertising">
+				<script class="divascookies-remove" type="text/plain" async="" src="./mlens magnifying glass jQuery plugin by musings.it_files/adsbygoogle.js"></script><script type="text/javascript" src="./mlens magnifying glass jQuery plugin by musings.it_files/adsbygoogle.js"></script>
+				<!-- mlens_download -->
+				<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-9173495310740153" data-ad-slot="3384403220" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:90px;margin:0;padding:0;position:relative;visibility:visible;width:728px;background-color:transparent"><iframe width="728" height="90" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+				<script class="divascookies-remove" type="text/plain">
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script><script type="text/javascript">
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+			<br class="esc">
+			<div id="parametri">
+				<h2>Settings for this demo</h2>
+				<h3>Files to include</h3>
+				<p>You have to include the last jQuery version and the minified version of <i>mlens</i> (suitable for production).</p>
+<pre>&lt;script type="text/javascript" src="js/jquery-last.min.js"&gt;&lt;/script&gt;
+&lt;script type="text/javascript" src="js/jquery.mlens-1.5.min.js"&gt;&lt;/script&gt;
+</pre>
+				<h3>HTML (there are news!)</h3>
+				<p>
+					You only need an image to attach <i>mlens</i> to. Our image has got an ID (<i>green_monster</i>), 
+					a parameter called <i>data-big</i> that contains the path to the hi-res version of the image,
+					a parameter called <i>data-overlay</i> that contains the path to the overlay image of the lens (optional, <span class="note">new form v.1.2</span>)
+					and a parameter called <i>data-big2x</i> that contains the path to the hi-res @2x version of the image for retina displays (optional, <span class="note">new form v.1.3</span>)
+				</p>
+<pre>&lt;img id="green_monster" src="images/GreenMonster.jpg" alt="green monster graffiti by Kotzian" data-big="images/GreenMonster_big.jpg" data-big2x="images/GreenMonster_big@2x.jpg" data-overlay="images/overlay.png" /&gt;
+</pre>
+				<h3>CSS (optional)</h3>
+				<p>You can style your image as you prefer, our image (<i>green_monster</i>) is wrapped in a DIV (<i>green_wrapper</i>) with these characteristics:</p>
+<pre>#green_wrapper {
+	position: relative;
+	width: 640px;
+	height: auto;
+	margin: 0 auto;
+	border: 12px solid #fff;
+	border-radius: 10px;
+	box-shadow: 1px 1px 5px rgba(50,50,50 0.5);
+	float: left;
+}
+</pre>
+				<h3>jQuery  (there are news!)</h3>
+				<p><i>mlens</i> has to be called right on the image (<i>green_monster</i>) and the configurable parameters are shown here.</p>
+<pre>&lt;script type="text/javascript"&gt;
+$(document).ready(function()
+{
+	$("#green_monster").mlens(
+	{
+		imgSrc: $("#green_monster").attr("data-big"),	    // path of the hi-res version of the image
+		imgSrc2x: $("#green_monster").attr("data-big2x"),  // path of the hi-res @2x version of the image
+                                                                   //for retina displays (optional)
+		lensShape: "circle",				// shape of the lens (circle/square)
+		lensSize: 180,					// size of the lens (in px)
+		borderSize: 4,					// size of the lens border (in px)
+		borderColor: "#fff",				// color of the lens border (#hex)
+		borderRadius: 0,				// border radius (optional, only if the shape is square)
+		imgOverlay: $("#green_monster").attr("data-overlay"), // path of the overlay image (optional)
+		overlayAdapt: true, // true if the overlay image has to adapt to the lens size (true/false)
+		zoomLevel: 2                                    // zoom level multiplicator (number)
+	});
+});
+&lt;/script&gt;
+</pre>
+			</div>
+			<div id="faq">
+				<h2>Frequently asked questions</h2>
+				<h3>What are the differences between the three versions that I can download?</h3>
+				<p>MIN is the minified version, suitable for production; DEV is the developer version, it is not minified and the code is commented (in English); MIN.GZ is a compressed version of MIN.</p>
+				<h3>Does <i>mlens</i> support multiple instances? </h3>
+				<p>Yes, <i>mlens</i> supports multiple instances and, due to many requests, here you will find <a href="http://mlens.musings.it/multipleimages_demo.zip">a working demo for download [.zip 367 Kb]</a>.</p>
+				<h3>Can I call <i>mlens</i> on a class instead of on a single image?</h3>
+				<p>Yes, you can call <i>mlens</i> on a bunch of images with the same class by calling it directly on the class, each image will have its own instance of <i>mlens</i>.</p>
+				<h3>Is there a Wordpress plugin?</h3>
+				<p>Not yet, we are working on it.</p>
+				<h3>Can I ask for a modification / a new feature / a customization?</h3>
+				<p>Sure! Contact us by email at musings[at]musings[dot]it or via Twitter <a href="http://twitter.com/musingspuntoit" target="_blank">@musingspuntoit</a>.</p>
+				<h3>Where can I find other plugins by musings?</h3>
+				<p>
+					You can find them here:<br>
+					<a href="http://www.musings.it/" target="_blank"><img src="./mlens magnifying glass jQuery plugin by musings.it_files/LogoMusings240x80.png" alt="musings web design" title="musings web design"></a> 
+					<a href="http://codecanyon.net/user/fedesib/portfolio?ref=fedesib" target="_blank"><img src="./mlens magnifying glass jQuery plugin by musings.it_files/codecanyon.png" alt="codecanyon" title="codecanyon"></a> 
+					<a href="http://www.codingdivas.net/" target="_blank"><img src="./mlens magnifying glass jQuery plugin by musings.it_files/bannerCodingDivas.jpg" alt="Coding Divas" title="Coding Divas"></a>
+				</p>
+				<h3>I really liked mlens, how can I help you?</h3>
+				<p><span>You can help us in these two ways: you can share <i>mlens</i> using the <i>social</i> buttons below and you can </span>
+				<span id="paypal_post_en">with <i>Paypal</i>. Thank you!</span></p>
+				<form id="paypal_en" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+					<input type="hidden" name="cmd" value="_s-xclick">
+					<input type="hidden" name="hosted_button_id" value="T9UQK7GHFSZ3E">
+					<input class="divascookies-remove" type="image" data-src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" src="./mlens magnifying glass jQuery plugin by musings.it_files/btn_donate_LG.gif">
+					<img class="divascookies-remove" alt="" border="0" data-src="https://www.paypalobjects.com/it_IT/i/scr/pixel.gif" width="1" height="1" src="./mlens magnifying glass jQuery plugin by musings.it_files/pixel.gif">
+				</form>
+			</div>
+			<div id="changelog">
+				<h2>Change log</h2>
+				<p><i>v.1.5</i> 2014.09.25: bug fixed ("destroy" method), code optimization</p>
+				<p><i>v.1.4</i> 2014.05.22: code optimized and added zoomLevel parameter (thanks to <a href="http://vincentrobic.me/" target="_blank">Vincent Robic</a>)</p>
+				<p><i>v.1.3</i> 2013.12.18: added @2x hi-res image support for retina displays. Thanks to <a href="http://www.mullie.eu/" target="_blank">Matthias Mullie</a> for the idea and the suggestions, thanks to <a href="http://www.colazionedamichy.it/" target="_blank">Michela Chiucini</a> for performing the tests</p>
+				<p><i>v.1.2</i> 2013.09.25: added overlay image support for the lens</p>
+				<p><i>v.1.1</i> 2013.08.26: added touch support for mobile</p>
+				<p><i>v.1.0</i> 2012.10.17: initial release</p>
+			</div>
+		</section>
+		<footer>
+			<p>
+				Made by <a href="http://www.musings.it/" target="_blank">musings.it</a> in 2012/15 - <a href="http://www.musings.it/en/privacy-cookie-policy" target="_blank">Privacy</a> - 
+				Demo photo by <a href="http://it.wikipedia.org/wiki/File:Street_Art_-_Green_Monster.jpg" target="_blank">Kotzian - Own work</a> - 
+				We are also on <a href="http://twitter.com/musingspuntoit" target="_blank">Twitter</a> and on <a href="http://codecanyon.net/user/fedesib/portfolio?ref=fedesib" target="_blank">Envato</a>
+			</p>
+			<div id="share"><a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fmlens.musings.it%2F" title="Share this page on facebook" class="pop share-icon share-icon-facebook" target="_blank" style="display: inline-block;"></a><a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fmlens.musings.it%2F&media=&description=mlens%20is%20the%20magnifying%20glass%20jQuery%20plugin%20by%20musings.it" title="Share this page on pinterest" class="pop share-icon share-icon-pinterest" target="_blank" style="display: inline-block;"></a><a href="https://plusone.google.com/_/+1/confirm?hl=en&url=http%3A%2F%2Fmlens.musings.it%2F" title="Share this page on googleplus" class="pop share-icon share-icon-googleplus" style="display: inline-block;"></a><a href="https://twitter.com/share?via=musingspuntoit&text=mlens%20magnifying%20glass%20jQuery%20plugin%20by%20musings.it" title="Share this page on twitter" class="pop share-icon share-icon-twitter" style="display: inline-block;"></a><a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fmlens.musings.it%2F&title=mlens%20magnifying%20glass%20jQuery%20plugin%20by%20musings.it&summary=mlens%20is%20the%20magnifying%20glass%20jQuery%20plugin%20by%20musings.it&source=musings.it" title="Share this page on linkedin" class="pop share-icon share-icon-linkedin" target="_blank" style="display: inline-block;"></a><a href="http://www.tumblr.com/share?v=3&u=http%3A%2F%2Fmlens.musings.it%2F" title="Share this page on tumblr" class="pop share-icon share-icon-tumblr" target="_blank" style="display: inline-block;"></a><a href="http://www.in1.com/cast?u=http%3A%2F%2Fmlens.musings.it%2F" title="Share this page on in1" class="pop share-icon share-icon-in1" target="_blank" style="display: inline-block;"></a><a href="mailto:?subject=mlens%20magnifying%20glass%20jQuery%20plugin%20by%20musings.it" title="Share this page on email" class="share-icon share-icon-email" style="display: inline-block;"></a><a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fmlens.musings.it%2F&title=mlens%20magnifying%20glass%20jQuery%20plugin%20by%20musings.it" title="Share this page on stumbleupon" class="pop share-icon share-icon-stumbleupon" target="_blank" style="display: inline-block;"></a><a href="http://digg.com/submit?url=http%3A%2F%2Fmlens.musings.it%2F&title=mlens%20magnifying%20glass%20jQuery%20plugin%20by%20musings.it" title="Share this page on digg" class="pop share-icon share-icon-digg" target="_blank" style="display: inline-block;"></a></div>
+		</footer>
+		<script type="text/javascript" src="./mlens magnifying glass jQuery plugin by musings.it_files/jquery.divascookies-0.5.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				// divas cookies
+				$.DivasCookies({
+					bannerText				: "mlens.musings.it uses cookies (3rd parties also) for statistical and marketing purposes.<br />By browsing this website you accept the use of cookies.",		
+					cookiePolicyLink		: "http://www.musings.it/en/privacy-cookie-policy",
+					cookiePolicyLinkText	: "Read my cookies and privacy policy (on musings.it).",
+					acceptButtonText		: "Ok, I got it!",
+					saveUserPreferences		: true,
+					pageReload				: false,
+					blockScripts			: true,
+					acceptOnScroll			: true
+				});
+        		
+        		//apre links in pagina a parte
+        		$("a[href^='http://']").attr("target","_blank");
+			});
+		</script>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-27210917-8', 'musings.it');
+		  ga('set', 'anonymizeIp', true);
+		  ga('send', 'pageview');
+		  
+		  setTimeout(ga('send','event','15sec','read','nav-buttons'),15000);
+		</script>
+		
+</body></html>

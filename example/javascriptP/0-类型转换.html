@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+
+//将字符串转换成数字：不能转换返回NaN
+var str = "100";
+var num = Number(str);  
+
+
+//布尔类型转换成数字：true转换为1 false转换为0
+var bool = true;
+var num = Number(bool);
+
+//null转换为数字
+var nu = null;
+var num = Number(nu);
+
+//undefined转换为数字
+var und;
+var num = Number(und);
+
+//对象转换成数字
+var obj = {};
+var num = Number(obj);
+
+//转换为字符串类型：使用toString()方法 或 String();
+var num = 100;
+var str = num.toString();
+
+var bool = true;
+var str = bool.toString();
+
+var und;
+// var str =und.toString();  //报错
+var str = String(und);
+
+var nu = null;
+// var str =nu.toString();  //报错
+var str = String(nu);
+
+var obj = {};
+var str = obj.toString();
+
+//转换为布尔类型
+var num = -0;   //0转换成false 其他转换成true；
+var bool = Boolean(num);
+
+var str = "";   //空字符串转换成false，非空字符串转换成true；
+var bool = Boolean(str);
+
+var nu = null;
+var bool = Boolean(nu);
+
+var und;
+var bool = Boolean(und);
+
+var obj = {};
+var bool = Boolean(obj);
+
+//parseInt和parseFloat 转换成数字。
+var str = "123.456px";
+var num = parseInt(str);
+var num = parseFloat(str);
+
+//强制转换
+//alert(true)  //alert将参数转换成字符串后输出。
+
+//- × /运算会转换为数字后再计算。
+
+
+
+</script>
+
+</body>
+</html>

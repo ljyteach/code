@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+
+<div id="picBox">
+  <img src="images/piano.jpg" id="img" />
+</div>
+<ul>
+  <li class="num">1</li>
+  <li class="num">2</li>
+  <li class="num">3</li>
+  <li class="num">4</li>
+</ul>
+
+<script type="text/javascript">
+//首先讲解实用DOM为元素设置样式
+//document.getElementById().style.color;
+var oImg = document.getElementById("img");
+
+var aLi = document.getElementsByClassName("num");
+
+var arrPic = ["images/piano.jpg","images/moon.jpg","images/sun.jpg","images/lake.jpg"];
+
+//绑定事件的时候，i的值分别是0 1 2 3 事件触发的时候i的值是4；
+/*for(var i = 0; i<aLi.length; i++){
+	aLi[i].onclick = function(){
+		console.log(i);
+		oImg.src = arrPic[i];
+		
+	}
+}*/
+//闭包
+for(var i = 0; i<aLi.length; i++){
+	aLi[i].onclick = function(i){
+		return function(){
+			console.log(i);
+			oImg.src = arrPic[i];
+		}
+	}(i)
+}
+
+
+</script>
+</body>
+</html>

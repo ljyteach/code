@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<script type="text/javascript">
+
+//函数时一段可执行的语句块，声明函数的时候不执行，调用的时候执行。
+
+function sayHello(){   //声明一个函数
+	console.log("hello");
+}
+sayHello();  //调用一个函数
+
+//函数可以实现某一个功能，需要实现这个功能的时候，调用这个函数就可以，不必在此写重写这个功能。
+
+//带参数的函数
+function sum(m,n){    //m n 是形参
+	var result = 3 * m + n;
+	console.log(result);
+}
+sum(3,4);             //3 4是实参
+
+//有返回值的函数
+function reSum(m,n){
+	var result = 3 * m + n;    //作用域的问题
+	return result;             //return 后面可以没有值：函数不再向下执行代码，后面有值，同样不再向下执行代码，并将return后面的值作为函数的结果返回。
+}
+console.log(reSum(3,5));
+
+</script>
+</body>
+</html>

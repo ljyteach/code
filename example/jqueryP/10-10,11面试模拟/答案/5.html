@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+		var body = document.getElementsByTagName("body");
+		var json = [
+			{"name":"张三","sex":"男","age":21},
+			{"name":"李四","sex":"女","age":18},
+			{"name":"王五","sex":"男","age":19},
+			{"name":"赵六","sex":"女","age":30},
+			{"name":"刘七","sex":"男","age":12},
+		];
+
+		var table = document.createElement("table");
+		for(var i in json){
+			var tr = document.createElement("tr");
+			for(var j in json[i]){
+				var td = document.createElement("td");
+				var txt = document.createTextNode(json[i][j]);
+				td.appendChild(txt);
+				tr.appendChild(td);
+				
+			}
+			table.appendChild(tr);
+		}
+		body[0].appendChild(table);
+
+	</script>
+</body>
+</html>

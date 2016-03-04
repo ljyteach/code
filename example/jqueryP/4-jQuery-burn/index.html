@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		body{
+			background-color: #000;
+		}
+		.burning{
+		  color: white;
+		}
+	</style>
+</head>
+<body>
+	<h1 class="burning">这是一个燃烧的字体</h1>
+	<input id="burn" type="button" value="燃烧">
+	<input id="noBurn" type="button" value="熄灭">
+	<script type="text/javascript" src="jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="jquery.burn.min.js"></script>
+	<script type="text/javascript">
+		$("#burn").click(function(){
+			$('.burning').burn();
+		});
+		$("#noBurn").click(function(){
+			$('.burning').burn(false);
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+//数组是一个特殊的对象，是有序元素的集合。
+
+//创建一个数组
+
+var arr = [];
+//var arr = new Array();
+
+var arrNum = [1,2,3,4,5];
+console.log(arrNum);
+
+console.log(arrNum[1]);
+console.log(arrNum.length);
+
+arrNum.push(6);
+console.log(arrNum);
+
+arrNum.unshift(0);
+console.log(arrNum);
+
+arrNum.shift();
+console.log(arrNum);
+
+arrNum.shift();
+console.log(arrNum);
+
+arrNum.pop();
+console.log(arrNum);
+
+for(var i = 0;i < arrNum.length; i++){
+	console.log(arrNum[i]);
+}
+
+//数组元素可以是任意数据类型
+
+</script>
+</body>
+</html>

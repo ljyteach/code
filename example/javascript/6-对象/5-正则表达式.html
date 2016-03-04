@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<script type="text/javascript" src="jquery-1.11.1.js"></script>
+<script type="text/javascript">
+$(function(){
+	re = /12345/;     //简单的正则表达式和test，exec方法；
+	re = /[0-9]+/;     //匹配数字。  中括号表示范围。
+	re = /[a-z]+/        //匹配小写字母。
+	re = /[A-Z]+/        //匹配大写字母。
+	re = /[a-zA-Z]+/     //匹配大写字母和小写字母。
+	//re = /[a-z]+|[A-Z]+/  //匹配大写字母或小写字母。
+	re = /[a-z][A-Z]/    //匹配小写字母后面跟着大写字母。
+	re = /[a-zA-Z0-9]+/   //匹配字母或者数字。
+	re = /([0-9]+)[a-z]+([0-9]+)/  //小括号表示分组。
+	re = /^[a-z]/                  //以字母开头，匹配第一个字母。 匹配密码，首位必须是字母。
+	re = /[^a-z]/                  //匹配首位不是字母的字符串。
+	re = /[a-z]$/                  //匹配已字母结尾的最后一个字母。
+	re = /[a-z]{2}/                //匹配固定位数的字符串。
+	re = /^[a-z][0-9a-z]{6,10}$/   //字母开头，7-11位的字符串。
+	re = /\d+/                      //匹配数字  \D匹配非数字。
+	re = /\w+/                      //匹配数字，字母，下划线。
+	re = /\s/                       //匹配空白字符。
+	re = /\d?/
+	re = /\d*/ 
+	re = /(\d+)0/
+	re = /(\d+?)0/
+	re = /(\w+)d/
+	re = /(\w+?)d/
+	re = /\d/g
+	re = /\-/g
+	//var re = /\d{1,}/;  var re = /\d+/;    //相同
+	//var re = /\d{0,}/;  var re = /\d*/;    //相同
+	//var re = /\d(0,1)/; var re = /^\d?$/;  //相同
+	//var re = /(\d+)0/             //贪婪匹配:\d+能匹配多少匹配多少。
+	//var re = /(\d+?)0/              //惰性匹配：？能少匹配就少
+	str = "1998-9-1"
+	var result = re.test(str);   //返回布尔类型
+	var reStr = re.exec(str)     //返回一个数组
+	//var strMatch = str.match(re);  //匹配内容 返回数组。
+	//var strReplace = str.replace(re,"xxx");   //将匹配的内容替换  g全局匹配  i不区分大小写。
+	var strSearch = str.search(re);   //返回索引号
+	var strSplit = str.split(re);     //按匹配的内容，将字符串拆分成数组。默认按都按拆分。
+	alert("出生年份："+strSplit[0]+"\n出生月份："+strSplit[1]+"\n出生日期："+strSplit[2]);
+})
+</script>
+</head>
+<body>
+<input type="text" id="txt" />
+<span></span>
+<p></p>
+</body>
+</html>

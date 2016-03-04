@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+*{margin:0px;padding:0px;}
+#numList li{list-style:none;float:left;height:20px;width:20px;border:1px solid #00f;text-align:center;cursor:default}
+</style>
+</head>
+<body>
+<div id="box">
+  <img id="pic" src="img/1.jpg" />
+  <ul id="numList">
+    <li id="one">1</li>
+    <li id="two">2</li>
+    <li id="three">3</li>
+    <li id="four">4</li>
+  </ul>
+</div>
+<script type="text/javascript" src="script/jquery-1.11.1.js"></script>
+<script type="text/javascript">
+$("#one").click(function(){
+	$("#pic").attr("src","img/1.jpg");
+});
+$("#two").click(function(){
+	$("#pic").attr("src","img/2.jpg");
+});
+$("#three").click(function(){
+	$("#pic").attr("src","img/3.jpg");
+});
+$("#four").click(function(){
+	$("#pic").attr("src","img/4.jpg");
+});
+</script>
+</body>
+</html>
