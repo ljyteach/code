@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		/*
+		为ul设置下列属性不会居中，因为ul宽度不固定。
+		#list{
+			margin:0 auto;
+		}*/
+		#list li{
+			width:20px;
+			height:20px;
+			border: 1px solid #f00;
+			float: left;
+			text-align: center;
+			list-style: none;
+		}
+		/*为table设置下列属性可以使不定宽度元素居中*/
+		#tb{
+			margin:0 auto;
+		}
+	</style>
+</head>
+<body>
+	<table id="tb">
+		<tr>
+			<td>
+				<ul id="list">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+				</ul>
+			</td>
+		</tr>
+	</table>
+				
+
+</body>
+</html>
