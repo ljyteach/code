@@ -3,20 +3,91 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		.e-a{
+			margin-top:100px; /*a标签设置上下边距没有作用*/
+			margin-left:100px;
+			padding-top:100px; /*a标签设置上下边距没有作用*/
+			padding-left:100px;
+		}
+		p{
+			text-indent: 100px;
+		}
+		.box-inline{
+			width:100px;
+			height:100px;
+			border:1px solid #f00;
+			display: inline;
+		}
+		.box-inline-block{
+			
+			height:100px;
+			border:1px solid #f00;
+			display: inline-block;
+		}
+		.big-box{
+
+		}
+		.box{
+			width:100px;
+			height:100px;
+			border:1px solid #f00;
+			float: left;
+		}
+
+	</style>
 </head>
 <body>
-	<h1>第一个h1标签</h1>
-	<h1>第二个h1标签</h1>
-	<p>第一个p标签</p>
-	<p>第二个p标签</p>
+	<!-- 块元素：独立成行.display:block -->
+	<div>div标签</div>
+	<h1>标题一</h1>
+	<h2>标题二</h2>
+	<h3>标题三</h3>
+	<h4>标题四</h4>
+	<h5>标题五</h5>
+	<h6>标题六</h6>
 	<ul>
-		<li>第一个li</li>
-		<li>第二个li</li>
-		<li>第三个li</li>
+	    <li>列表一</li>
+	    <li>列表二</li>
+	    <li>列表三</li>
 	</ul>
-	<a>第一个a标签</a>
-	<a>第二个a标签</a>
-	<img src="images/1.jpg" alt="">
-	<img src="images/2.jpg" alt="">
+	<p>这是一个段落，是一个块元素！这是一个段落，是一个块元素！这是一个段落，是一个块元素！这是一个段落，是一个块元素！这是一个段落，是一个块元素！这是一个段落，是一个块元素！这是一个段落，是一个块元素！这是一个段落，是一个块元素！这是一个段落，是一个块元素！这是一个段落，是一个块元素！这是一个段落，是一个块元素！这是一个段落，是一个块元素！这是一个段落，是一个块元素！这是一个段落，是一个块元素！这是一个段落，是一个块元素！这是一个段落，是一个块元素！这是一个段落，是一个块元素！这是一个段落，是一个块元素</p>
+	<p>这是一个段落，是一个块元素！这是一个段落，是一个块元素！这是一个段落，是一个块元素！这是一个段落，是一个块元素！这是一个段落，是一个块元素！这是一个段落，是一个块元素！这是一个段落，是一个块元素！这是一个段落，是一个块元素！这是一个段落，是一个块元素！</p>
+	<!-- 内联元素：和其他元素在一行，不可以设置宽高。顶部、底部边距不能设置。具体宽高是内部文字或图片的宽高。display:inline -->
+	<a class="e-a" href="">链接<span class="e-span">可以给span单独添加样式</span></a>
+	<div>
+		<a href="">这是一个a</a>
+		<a href="">这也是一个a</a>
+	</div>
+	<!-- 内联块元素:元素的宽高可以设置，上下边距可以设置，可以与其他元素在一行。
+	    display:inline-block -->
+	<img src="" alt="显示图片">
+	<input >
+	<div>
+		<img src="images/1.jpg" alt="">
+		<img src="images/2.jpg" alt="">
+	</div>
+	<div class="big-box-inline">
+		<div class="box-inline">asdfasdf</div>
+		<div class="box-inline">asdfsadf</div>
+		<div class="box-inline">asdfsadf</div>
+	</div>
+	<div class="big-box-inline-block">
+		<div class="box-inline-block">asdfas dfsafs afs af safaf</div>
+		<div class="box-inline-block">asdfsadf</div>
+		<div class="box-inline-block">asdfsadf</div>
+	</div>
+	<div class="big-box">
+		<div class="box">asdfas dfsafs afs af safaf</div>
+		<div class="box">asdfsadf</div>
+		<div class="box">asdfsadf</div>
+	</div>
+	
+	
+	
 </body>
 </html>
