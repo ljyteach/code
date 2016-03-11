@@ -220,7 +220,7 @@ $().toggleClass();
 知识点：css3中的媒体查询
 
 3、移动端页面制作技巧（与pc端的区别）。
-知识点：veiwport flexbox
+知识点：viewport flexbox
 案例：制作移动端页面
 
 4、移动端的javascript
