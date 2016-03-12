@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input id="txt" type="text" value="0">
+	<input id="plus" type="button" value="+">
+	<input id="cut" type="button" value="-">
+
+
+	<script type="text/javascript" src="script/jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		var $txt = $("#txt");
+		$("#plus").click(function(){
+			var val = Number($txt.val()) + 1;
+			$txt.val(val);
+		});
+		$("#cut").click(function(){
+			if($txt.val()>0){
+				var val = Number($txt.val()) - 1;
+				$txt.val(val);
+			}
+			
+		});
+
+	</script>
+</body>
+</html>
