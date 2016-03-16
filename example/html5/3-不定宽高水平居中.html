@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no" />
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		/*body{
+			justify-content:center;
+			align-items:center;
+			display: -webkit-flex;
+		}
+		.box{
+			width: 100px;
+			height: 100px;
+			background-color: #f00;
+		}*/
+		.box{
+			/*利用绝对定位水平和垂直居中*/
+			position: absolute;
+			top:50%;
+			left:50%;
+			z-index: 3;
+			-webkit-transform:translate(-50%,-50%);
+			height: 100px;
+			width: 100px;
+			background-color: #f00;
+			border-radius: 6px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>
