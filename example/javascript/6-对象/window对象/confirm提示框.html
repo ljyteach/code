@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<ul>
+		<li><a href="">香蕉</a><span class="del"> 删除</span></li>
+		<li><a href="">苹果</a><span class="del"> 删除</span></li>
+		<li><a href="">鸭梨</a><span class="del"> 删除</span></li>
+		<li><a href="">芒果</a><span class="del"> 删除</span></li>
+		<li><a href="">草莓</a><span class="del"> 删除</span></li>
+	</ul>
+	<script type="text/javascript" src="../script/jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+
+		$(".del").click(function(){
+			if(confirm("是否删除该数据？")){
+				$(this).parent().remove();
+			}
+		})
+		
+
+	</script>
+</body>
+</html>
