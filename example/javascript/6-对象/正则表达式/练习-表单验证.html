@@ -7,7 +7,7 @@
 div{margin-top:30px;}
 
 </style>
-<script type="text/javascript" src="script/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="../script/jquery-1.11.1.js"></script>
 <script type="text/javascript">
 $(function(){
 	function setp(str){
@@ -17,7 +17,7 @@ $(function(){
 		var re = /^[\w\.]+@[\w\.]+\.[0-9a-zA-Z]{2,4}$/;
 		//alert(re.exec(str));
 		return re.test(str);
-		
+
 	}
 	function checkCellphone(str){
 		//var re = /^\d{11}$/;
@@ -40,7 +40,7 @@ $(function(){
 		setp(re.exec(str))
 		return re.test(str);
 	}
-	
+
 	$("#email input").blur(function(){
 		if(!checkMail(this.value)){
 			$("#email span").html("<span style='color:#f00'>请输入正确的邮箱格式</span>")
