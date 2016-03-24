@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+		//同步的程序
+		// var value = 10;
+		
+		// function getVal(){
+		// 	console.log(value);
+		// }
+
+		// function setVal(){
+		// 	setTimeout(function(){
+		// 		value++;
+		// 	},1000)
+		// }
+
+		// setVal();
+		// getVal();
+
+		//异步
+		var value = 10;
+		function getVal(){
+			console.log(value)
+		}
+		function setVal(callback){
+			setTimeout(function(){
+				value++;
+				callback();
+			},1000)
+		}
+		
+		setVal(getVal);
+
+	</script>
+</body>
+</html>
