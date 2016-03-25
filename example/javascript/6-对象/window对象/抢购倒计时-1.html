@@ -26,15 +26,15 @@
 <body>
 <div> <span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span> </div>
 <a class="btn" href="#">开始抢购</a> 
-<script type="text/javascript" src="script/jquery-1.11.1.js"></script> 
+<script type="text/javascript" src="../script/jquery-1.11.1.js"></script> 
 <script type="text/javascript">
 
 //设置抢购时间
-var targetTime = [15,09,00];
+var targetTime = [22,30,00];
 
-var targetHours; 
-var targetMinutes;
-var targetseconds;
+var targetHours = 0; 
+var targetMinutes = 0;
+var targetseconds = 0;
 
 var t = setInterval(getTargetTime,1000);
 function getTargetTime(){

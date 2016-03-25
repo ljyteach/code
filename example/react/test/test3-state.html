@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../js/react.js"></script>
+	<script type="text/javascript" src="../js/JSXTransformer.js"></script>
+</head>
+<body>
+
+	<div id="example"></div>
+
+	<script type="text/jsx">
+		//组件名称必须以大写字母开头
+		var Clock = React.createClass({
+			//在组建挂载之前调用一次getInitialState,返回值会作为this.state的初始值
+			getInitialState:function(){
+				var date = new Date();
+				return {
+					hours:date.getHours(),
+					minutes:date.getMinutes(),
+					seconds:date.getSeconds()
+				}
+			},
+			//自定义方法
+			myTick:function(){
+				var date = new Date();
+				this.setState({
+					hours:date.getHours(),
+					minutes:date.getMinutes(),
+					seconds:date.getSeconds()
+				});
+			},
+			//
+			componentDidMount:function(){
+				this.interval = setInterval(this.myTick,1000);
+			},
+			
+			componentWillUnmount:function(){
+				clearInterval(this.interval);
+			},
+			render:function(){
+				return (
+					<div className="aaa">
+						<span>{this.state.hours}</span>:
+						<span>{this.state.minutes}</span>:
+						<span>{this.state.seconds}</span>
+					</div>
+				);
+			}
+		})
+
+		React.render(
+			<Clock />,
+			document.getElementById("example")
+		)
+
+	</script>
+</body>
+</html>

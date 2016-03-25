@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body ng-app="app">
+	<form ng-controller="myCtrl">
+		<label for="">邮箱</label>
+		<input type="text" ng-model="user.email">
+		<label for="">用户名</label>
+		<input type="text" ng-model="user.username">
+		<input type="button" ng-click="user.getuser()" value="获取数据">
+		<input type="button" ng-click="user.setuser()" value="设置数据">
+	</form>
+
+	<script type="text/javascript" src="js/angular.js"></script>
+	<script>
+		var app = angular.module("app",[]);
+		//实现双向的数据绑定。
+		app.controller("myCtrl",function($scope){
+			$scope.user = {
+				email:"test@163.com",
+				username:"lee",
+				getuser:function(){
+					alert(this.email + " " + this.username);
+				},
+				setuser:function(){
+					this.email = "new@163.com";
+					this.username = "zhang";
+				}
+			}
+		})
+	</script>
+</body>
+</html>

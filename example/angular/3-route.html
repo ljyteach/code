@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body ng-app="myApp">
+	
+	<h1>路由主页面</h1>
+	<ul>
+		<li><a href="#page1">page1</a></li>
+		<li><a href="#page2">page2</a></li>
+		<li><a href="#page3">page3</a></li>
+	</ul>
+	<div ng-view></div>
+
+
+	<script type="text/javascript" src="js/angular.js"></script>
+	<script type="text/javascript" src="js/angular-route.js"></script>
+	<script type="text/javascript">
+		var myApp = angular.module("myApp",["ngRoute"]);
+		myApp.config(function($routeProvider){
+			$routeProvider.when("/page1",{
+				templateUrl:"pages/page1.html",
+				controller:"pageOneCtrl"
+			}).when("/page2",{
+				templateUrl:"pages/page2.html"
+			}).when("/page3",{
+				templateUrl:"pages/page3.html"
+			}).otherwise({
+				templateUrl:"pages/notFound.html"
+			})
+		})
+
+		myApp.controller("pageOneCtrl",function($scope){
+			$scope.name = "你好"
+		})
+	</script>
+</body>
+</html>

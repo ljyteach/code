@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/react.js"></script>
+	<script type="text/javascript" src="js/JSXTransformer.js"></script>
+	<!-- JSXTransformer.js可以讲JSX转换成标准的JavaScript -->
+</head>
+<body>
+	<div id="example"></div>
+
+	<script type="text/jsx">
+	// 如果使用jsx语法 需要在type中设置text/jsx
+		var CommentBox = React.createClass({
+			render:function(){
+				return (
+					<div className="CommentBox">
+						hello world;I am a CommentBox
+					</div>
+				);
+			}
+		})
+
+		React.render(
+			<CommentBox />,
+			document.getElementById("example")
+		);
+	</script>
+</body>
+</html>

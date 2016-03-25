@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../js/react.js"></script>
+	<script type="text/javascript" src="../js/JSXTransformer.js"></script>
+</head>
+<body>
+
+	<div id="example"></div>
+
+	<script type="text/jsx">
+		//组件名称必须以大写字母开头
+		//createClass:创建一个组件类，并做出定义。
+		//创建一个组件后，必须加入一个render方法
+		var Clock = React.createClass({
+			render:function(){
+				return (
+					<div className="aaa">
+						<span>11</span>:
+						<span>11</span>:
+						<span>11</span>
+					</div>
+				);
+			}
+		})
+
+		React.render(
+			<Clock />,
+			document.getElementById("example")
+		)
+
+	</script>
+</body>
+</html>
