@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="box" class="box test temp abc"></div>
+
+	<script type="text/javascript">
+		var oBox = document.getElementById("box");
+		function addClass(element,className){
+			element.className = element.className + " " + className;
+		}
+
+		// addClass(oBox,"test");
+		// addClass(oBox,"test2");
+
+		function removeClass(element,className){
+			var arrClassName = element.className.split(" ");
+			var newClassName = [];
+			for(var i = 0;i<arrClassName.length;i++){
+				if(arrClassName[i] != className){
+					newClassName.push(arrClassName[i]);
+				}
+			}
+			var newClass = newClassName.join(" ");
+			element.className = newClass;
+		}
+
+		
+
+
+	</script>
+</body>
+</html>
