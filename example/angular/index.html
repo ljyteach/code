@@ -3,8 +3,30 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
 </head>
-<body>
+<body ng-app="app">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-2">
+				<ul class="nav nav-pills nav-stacked">
+				  <li role="presentation"><a href="#">主页</a></li>
+				  <li role="presentation"><a href="#">班级信息</a></li>
+				  <li role="presentation"><a href="#">课程信息</a></li>
+				  <li role="presentation"><a href="#">学校信息</a></li>
+				  <li role="presentation"><a href="#teacher">教师信息</a></li>
+				  <li role="presentation"><a href="#student">学生信息</a></li>
+				</ul>
+			</div>
+			<div class="col-md-10">
+				<div ng-view></div>
+			</div>
+		</div>
+	</div>
 	
+	<script type="text/javascript" src="js/angular.js"></script>
+	<script type="text/javascript" src="js/angular-route.js"></script>
+	<script type="text/javascript" src="js/route.js"></script>
+	<script type="text/javascript" src="js/controller.js"></script>
 </body>
 </html>

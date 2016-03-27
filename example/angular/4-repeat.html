@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body ng-app="app">
+	<ul ng-controller="myCtrl">
+		<h1><a>{{txt}}</a></h1>
+		<li ng-repeat="name in names">{{name}}</li>
+	</ul>
+
+	<table ng-controller="tableCtrl">
+		<h1><a>{{txt}}</a></h1>
+		<tr ng-repeat="person in tableData">
+			<td>{{person.name}}</td>
+			<td>{{person.age}}</td>
+			<td>{{person.sex}}</td>
+		</tr>
+	</table>
+
+
+	<script type="text/javascript" src="js/angular.js"></script>
+	<script type="text/javascript">
+		var app = angular.module("app",[]);
+		app.controller("myCtrl",function($scope){
+			$scope.names = ["zhang","wang","lee","zhao"];
+		})
+
+		app.controller("tableCtrl",function($scope){
+			$scope.tableData = [
+				{name:"lee",age:21,sex:"male"},
+				{name:"wang",age:18,sex:"female"},
+				{name:"zhang",age:2,sex:"male"},
+				{name:"zhao",age:23,sex:"female"},
+			]
+		})
+	</script>
+</body>
+</html>

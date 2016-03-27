@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="js/react.js"></script>
+	<script type="text/javascript" src="js/JSXTransformer.js"></script>
+	<!-- JSXTransformer.js可以讲JSX转换成标准的JavaScript -->
+</head>
+<body>
+	<div id="example"></div>
+
+	<script type="text/jsx">
+		var HelloMessage = React.createClass({
+		  render: function() {
+		    return <div>Hello {this.props.name}</div>;
+		  }
+		});
+
+		React.render(<HelloMessage name="John" />, document.getElementById("example"));
+
+	</script>
+</body>
+</html>

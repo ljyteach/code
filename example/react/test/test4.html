@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../js/react.js"></script>
+	<script type="text/javascript" src="../js/JSXTransformer.js"></script>
+</head>
+<body>
+
+	<div id="example"></div>
+
+	<script type="text/jsx">
+		
+		var Btn = React.createClass({
+			onClick:function(e){
+				console.log("点击按钮");
+			},
+			render:function(){
+				return (
+					<input onClick={this.onClick} type="button" value='按钮' />
+				);
+				//标签一定要有结束符号
+			}
+		})
+
+		var List = React.createClass({
+			//未完待续......
+		})
+
+		React.render(
+			<Btn />,
+			document.getElementById("example")
+		)
+
+	</script>
+</body>
+</html>
