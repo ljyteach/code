@@ -3,8 +3,26 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<style type="text/css">
+		.box1{
+			height: 100px;
+			width: 100px;
+			background-color: #999;
+			border-radius:50px;  
+			/*半径是50像素的圆角*/
+		}
+		.box2{
+			margin-top:20px;
+			height: 100px;
+			width: 100px;
+			background-color: #999;
+			border-radius:50px 0 0 0;  
+			/*左上开始顺时针计算*/
+		}
+	</style>
 </head>
 <body>
-	
+	<div class="box1"></div>
+	<div class="box2"></div>
 </body>
 </html>
