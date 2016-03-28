@@ -15,6 +15,7 @@
 	//页面事件过多，或某些元素是后添加到元素。
 		var oList = document.getElementById("list");
 		oList.addEventListener("click",function(event){
+
 			switch(event.target.id){
 				case "doSomething":{
 					console.log(event.target);
@@ -29,6 +30,7 @@
 					break;
 				}
 			}
+
 		},false)
 	</script>
 </body>
