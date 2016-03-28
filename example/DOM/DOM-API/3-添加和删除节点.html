@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+<input type="text" id="txt" />
+<input type="button" id="btn" value="添加节点" />
+<h3>你喜欢的水果</h3>
+<ul id="list" class="list">
+  <li class="fruit">香蕉<span class="delete"> 删除</span></li>
+  <li class="fruit">苹果<span class="delete"> 删除</span></li>
+  <li class="fruit">鸭梨<span class="delete"> 删除</span></li>
+</ul>
+
+
+<script type="text/javascript">
+var oTxt = document.getElementById("txt");
+var oBtn = document.getElementById("btn");
+var oUl = document.getElementById("list");
+var aSpan = document.getElementsByClassName("delete");
+
+//createElement创建一个元素节点。
+//var liNode = document.createElement("li");
+
+//createTextNode创建一个文本节点
+//var textNode = document.createTextNode("菠萝");
+
+//appendChild添加节点
+//liNode.appendChild(textNode);
+//oUl.appendChild(liNode);
+
+
+
+oBtn.onclick = function(){
+	var liNode = document.createElement("li");
+	var textNode = document.createTextNode(oTxt.value);
+	liNode.appendChild(textNode);
+	oUl.appendChild(liNode);
+}
+
+//删除节点
+for(var i = 0; i<aSpan.length; i++){
+	aSpan[i].onclick = function(){
+		oUl.removeChild(this.parentNode);
+	}
+}
+
+
+</script>
+</body>
+</html>

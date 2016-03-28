@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+</head>
+
+<body>
+	<ul id="list">
+		<li id="doSomething">做一些事情</li>
+		<li id="goSomewhere">去某个地方</li>
+		<li id="saySomething">说一些内容</li>
+	</ul>
+	<script type="text/javascript">
+	//页面事件过多，或某些元素是后添加到元素。
+		var oList = document.getElementById("list");
+		oList.addEventListener("click",function(event){
+
+			switch(event.target.id){
+				case "doSomething":{
+					console.log(event.target);
+					break;
+				}
+				case "goSomewhere":{
+					console.log("去某个地方");
+					break;
+				}
+				case "saySomething":{
+					console.log("说一些内容");
+					break;
+				}
+			}
+
+		},false)
+	</script>
+</body>
+</html>

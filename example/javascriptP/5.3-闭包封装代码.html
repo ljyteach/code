@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>闭包封装代码</title>
+  </head>
+  <body>
+    <script>
+      //利用闭包和立即执var lee = 行函数来封装代码
+      var lee = (function(){
+        // var num1 = "";
+        // var num2 = "";
+        // var sign = "";
+        // var result = 0;
+        function count(num1,num2,sign){
+          switch(sign){
+            case "+":return num1 + num2;break;
+            case "-":return num1 - num2;break;
+            case "*":return num1 * num2;break;
+            case "/":return num1 / num2;break;
+          }
+        }
+        return {
+          num1:"",
+          num2:"",
+          sign:"",
+          getresult:function(){
+            return count(this.num1,this.num2,this.sign);
+          }
+        }
+      })()
+      lee.num1 = 10;
+      lee.num2 = 20;
+      lee.sign = "+";
+      console.log(lee.getresult());
+    </script>
+  </body>
+</html>
