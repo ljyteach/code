@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input id="btn" type="button" name="name" value="按钮">
+    <ul>
+      <li class="fruit">香蕉</li>
+      <li class="fruit">香蕉</li>
+      <li class="fruit">香蕉</li>
+      <li class="fruit">苹果</li>
+      <li class="fruit">鸭梨</li>
+    </ul>
+    <script type="text/javascript">
+      var lee = function(selector){
+        return lee.prototype.init(selector);
+      };
+
+      lee.prototype = {
+        init:function(selector){
+          this[0] = document.getElementsByClassName(selector);
+          return this;
+        },
+        click:function(fun){
+          for(var i = 0;i<this[0].length;i++){
+            this[0][i].addEventListener("click",fun,false);
+          }
+
+        }
+      }
+
+      lee("fruit").click(function(){
+        console.log(this);
+      })
+
+    </script>
+  </body>
+</html>

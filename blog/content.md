@@ -251,7 +251,7 @@ $().toggleClass();
 
 4、angular或react入门
 
-5、webpack requirejs 
+5、webpack requirejs
 知识点：模块化 ADM CMD的概念
 
 6、D3.JS
@@ -284,4 +284,3 @@ $().toggleClass();
 + 商品筛选 json静态数据
 + 用户数据 数据库
 + 用户上传头像
-

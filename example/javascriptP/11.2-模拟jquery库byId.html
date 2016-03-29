@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input id="btn" type="button" name="name" value="按钮">
+    <ul>
+      <li>香蕉</li>
+      <li>香蕉</li>
+      <li>香蕉</li>
+      <li id="apple">苹果</li>
+      <li>鸭梨</li>
+    </ul>
+    <script type="text/javascript">
+      var lee = function(selector){
+        return lee.prototype.init(selector);
+      };
+
+      lee.prototype = {
+        init:function(selector){
+          this[0] = document.getElementById(selector);
+          return this;
+        },
+        index:function(){
+          var allNode = this[0].parentNode.children;
+          for(var i = 0;i<allNode.length;i++){
+            if(allNode[i] == this[0]){
+              return i;
+            }
+          }
+        },
+        sibling:function(){
+
+        },
+        click:function(fun){
+          this[0].addEventListener("click",fun,false);
+        }
+      }
+
+      lee("apple").click(function(){
+        console.log(this);
+      })
+
+    </script>
+  </body>
+</html>
