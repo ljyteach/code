@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" id="btn" value="抽奖">
+	<script type="text/javascript">
+		var nameList = ["李雷","韩梅梅","Lily","Lucy","小红","小明","小刚","小亮"];
+		var btn = document.getElementById("btn");
+		var readyList = [];
+		function getName(){
+			var num = Math.floor(Math.random()*8);
+			if(readyList.length == 0){
+				readyList.push(nameList[num]);
+				console.log(nameList[num]);
+			}else{
+				for(var i = 0;i<readyList.length;i++){
+					if(readyList[i] == nameList[num]){
+						getName();
+						return ;
+					}
+				}
+				readyList.push(nameList[num]);
+				console.log(nameList[num]);
+			}
+		}
+		btn.onclick = function(){
+			getName();
+		}
+
+	</script>
+</body>
+</html>
