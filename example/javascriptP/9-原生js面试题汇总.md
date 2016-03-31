@@ -46,6 +46,19 @@ var st = new Student("李四");
 st.move();
 ```
 
+题目六
+``` js
+var a = 10;
+function fun(){
+  var a = 20;
+  return (function(){
+    return this.a;
+  })()
+}
+var result = fun();
+console.log(result)
+```
+
 ### 2、下列表达式的返回值分别是什么？
 ``` js
 null == undefined;
