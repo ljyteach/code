@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<table id="tb"></table>
+	
+	<script type="text/javascript" src="script/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="script/dj-table.js"></script>
+	<script type="text/javascript">
+		//两个类 Table Data
+		//每一行数据都是一个数据实例
+		//table元素可以对应一个table实例。
+		//数据模型
+		var data = {
+			name:"lee",
+			age:12,
+			sex:"male"
+		}
+
+		
+		var table = new Lee.Table("#tb");
+		table.insertData(data);
+		
+
+	</script>	
+</body>
+</html>
