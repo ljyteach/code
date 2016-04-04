@@ -7,6 +7,7 @@
   <body>
     <input type="text" id="txt" value="">
     <input type="button" id="btn" value="添加节点">
+    <input type="button" id="one" value="一次性事件">
     <ul id="list">
       <li>香蕉 <span class="delete">删除</span></li>
       <li>苹果 <span class="delete">删除</span></li>
@@ -28,14 +29,15 @@
       // $(".delete").bind("click",function(){
       //   $(this).parent().remove();
       // })
-      //使用on没有事件委托的效果
-      // $(".delete").on("click",function(){
-      //   $(this).parent().remove();
-      // })
 
       //使用delegate可以实现事件委托
       $("#list").delegate(".delete","click",function(){
         $(this).parent().remove();
+      })
+
+      //one 绑定一个一次性的事件
+      $("#one").one("click",function(){
+        alert("只弹出一次！");
       })
     </script>
   </body>
