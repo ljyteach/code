@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.box{
+			width:100px;
+			height:100px;
+			background-color: red;
+			border:1px solid #ff0;
+			float: left;
+
+		}
+		.active{
+			background-color: #00f;
+		}
+	</style>
+</head>
+<body>
+	<div class="box bind"></div>
+	<div class="box hover1"></div>
+	<div class="box hover2"></div>
+	<script type="text/javascript" src="script/jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		//ready bind unbind live on off delegate undelegate hover
+		// $(document).ready(function(){}) 与 $(function(){})相同.
+
+		//使用bind方法绑定多个事件.
+		$(".bind").bind("click mouseover",function(){
+			console.log("hello");
+		})
+
+		//hover 是mouseenter 和 mouseleaved 的组合事件.
+		//hover两个函数作为参数
+		$(".hover1").hover(
+			function(){
+				console.log("in");
+			},
+			function(){
+				console.log("out");
+			}
+		)
+
+		//hover一个函数作为参数:鼠标移入移除都会出发事件,并执行同一个函数.
+		$(".hover2").hover(
+			function(){
+				$(this).toggleClass("active");
+			}
+		)
+
+
+	</script>
+</body>
+</html>

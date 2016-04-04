@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="text" id="txt" value="">
+    <input type="button" id="btn" value="添加节点">
+    <ul id="list">
+      <li>香蕉 <span class="delete">删除</span></li>
+      <li>苹果 <span class="delete">删除</span></li>
+      <li>鸭梨 <span class="delete">删除</span></li>
+    </ul>
+    <script type="text/javascript" src="script/jquery-1.11.1.js"></script>
+    <script type="text/javascript">
+      $("#btn").click(function(){
+        var val = $("#txt").val();
+        var $li = $("<li> <span class='delete'>删除</span></li>");
+        $li.prepend(val);
+        $("#list").append($li);
+      })
+      //下述方法不能删除后添加的元素---直接写click其实是bind的简写,两种写法作用相同.
+      // $(".delete").click(function(){
+      //   $(this).parent().remove();
+      // })
+      //下述方法同click,不能删除后添加的元素.
+      // $(".delete").bind("click",function(){
+      //   $(this).parent().remove();
+      // })
+      //使用on没有事件委托的效果
+      // $(".delete").on("click",function(){
+      //   $(this).parent().remove();
+      // })
+
+      //使用delegate可以实现事件委托
+      $("#list").delegate(".delete","click",function(){
+        $(this).parent().remove();
+      })
+    </script>
+  </body>
+</html>
