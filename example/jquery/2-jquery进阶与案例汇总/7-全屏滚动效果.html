@@ -47,7 +47,7 @@
 			position: fixed;
 			right: 20px;
 			bottom:20px;
-			
+
 		}
 	</style>
 </head>
@@ -79,8 +79,8 @@
 		})
 
 		$("#to-top img").click(function(){
-			$(window).scrollTop(0);  //直接返回顶部
-			//$("html,body").animate({scrollTop:0},1000);  //动画的方式混动到顶部
+			//$(window).scrollTop(0);  //直接返回顶部
+			$("html,body").animate({scrollTop:0},5000);  //动画的方式混动到顶部
 		})
 
 		//添加全屏滚动的效果
@@ -89,7 +89,7 @@
 			var $elem = $(href);
 			if($elem[0]){
 				var offsetTop = $elem.offset().top;
-				$("html,body").animate({scrollTop:offsetTop},1000);
+				$("html,body").animate({scrollTop:offsetTop},5000);
 			}
 			return false;
 		})
