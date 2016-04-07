@@ -57,17 +57,27 @@
     <script type="text/javascript" src="script/jquery.cycle.all.js"></script>
     <script>
       //http://jquery.malsup.com/cycle/options.html 文档
+
+
+
+
       $("#picList").cycle({
         before:function(){
           var index = $(this).index();
           $("#numList li").eq(index).addClass("active").siblings().removeClass("active");
         }
       });
+
+      // $("#picList").cycle();
+
+
       $("#numList li").click(function(){
         var index = $(this).index();
         $("#picList").cycle(index);
         $(this).addClass("active").siblings().removeClass("active");
       })
+
+
       $("#prev").click(function(){
             $("#picList").cycle("prev");
       });
