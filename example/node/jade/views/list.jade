@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	title 测试列表
+body
+	h1 for in
+	- for(var i in data)
+		- var str = i + " " + data[i];
+		li=str
+	h1 each in
+	ul
+	- each value,key in data
+		- var str = key + " " + value;
+		li=str
