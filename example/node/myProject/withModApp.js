@@ -34,5 +34,15 @@ app.get("/book",function(req,res){
 	})
 })
 
+app.get("/adduser",function(req,res){
+	res.render("adduser");
+})
+
+app.get("/insertuser",function(req,res){
+	dataHandle.addData("data/userlist.json",req.query,function(err){
+		res.redirect("/user");  //页面重定向
+	})
+})
+
 app.listen(3000);
 console.log("服务器启动成功！");
