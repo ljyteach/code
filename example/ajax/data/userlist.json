@@ -1,0 +1,26 @@
+[
+    {
+        "username": "lee",
+        "password": "aaa",
+        "sex": "male",
+        "age": 20
+    },
+    {
+        "username": "zhang",
+        "password": "bbb",
+        "sex": "male",
+        "age": 21
+    },
+    {
+        "username": "wang",
+        "password": "ccc",
+        "sex": "female",
+        "age": 22
+    },
+    {
+        "username": "zhao",
+        "password": "ddd",
+        "sex": "male",
+        "age": 23
+    }
+]

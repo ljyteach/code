@@ -1,4 +1,5 @@
 [
+<<<<<<< HEAD
   {"username":"lee","password":"aaa","sex":"male","age":21},
   {"username":"wang","password":"bbb","sex":"female","age":23},
   {"username":"zhao","password":"ccc","sex":"male","age":11},
@@ -6,3 +7,54 @@
   {"username":"li","password":"eee","sex":"male","age":61},
   {"username":"test","password":"eee","sex":"male","age":25}
 ]
+=======
+    {
+        "username": "lee",
+        "password": "aaa",
+        "sex": "male",
+        "age": 20
+    },
+    {
+        "username": "zhang",
+        "password": "bbb",
+        "sex": "male",
+        "age": 21
+    },
+    {
+        "username": "wang",
+        "password": "ccc",
+        "sex": "female",
+        "age": 22
+    },
+    {
+        "username": "zhao",
+        "password": "ddd",
+        "sex": "male",
+        "age": 23
+    },
+    {
+        "username": "liu",
+        "password": "eee",
+        "sex": "male",
+        "age": 24
+    },
+    {
+        "username": "qwer",
+        "password": "wqer",
+        "sex": "wqer",
+        "age": "wqer"
+    },
+    {
+        "username": "aaaaaa",
+        "password": "aaaaaa",
+        "sex": "aaaaaa",
+        "age": "aaaaaa"
+    },
+    {
+        "username": "qwerwqer",
+        "password": "wqerwqer",
+        "sex": "wqerwqer",
+        "age": "wqerwqer"
+    }
+]
+>>>>>>> d3c71b6b7d0cbddd435c156f6a180f4c04549598
