@@ -1,0 +1,8 @@
+[
+  {"username":"lee","password":"aaa","sex":"male","age":21},
+  {"username":"wang","password":"bbb","sex":"female","age":23},
+  {"username":"zhao","password":"ccc","sex":"male","age":11},
+  {"username":"liu","password":"ddd","sex":"female","age":31},
+  {"username":"li","password":"eee","sex":"male","age":61},
+  {"username":"test","password":"eee","sex":"male","age":25}
+]
