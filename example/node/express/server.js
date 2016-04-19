@@ -2,7 +2,8 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var app = express();
 //use方法，使用中间件
-app.use(bodyParser.urlencoded({ extended: false })); //req.body可以获取参数
+// app.use(bodyParser.urlencoded({ extended: false })); //req.body可以获取参数
+app.use(bodyParser.urlencoded()); //req.body可以获取参数
 app.use(express.static("public"));  //设置静态文件目录
 
 //设置路由，接收get请求
