@@ -73,9 +73,29 @@ var selectData = function(dataUrl,next){
 	})
 }
 
+var filterData = function(dataUrl,key,next){
+	var newArr = [];
+	fs.readFile(dataUrl,"utf8",function(err,data){
+		var jsonData = JSON.parse(data);
+		if(key){
+			for(var i in jsonData){
+				if(jsonData[i].username == key){
+					newArr.push(jsonData[i]);
+				}
+			}
+			next(newArr);
+		}else{
+
+			next(jsonData);
+		}
+		
+	})
+}
+
 module.exports = {
 	addData:addData,
 	deleteData:deleteData,
 	updateData:updateData,
-	selectData:selectData
+	selectData:selectData,
+	filterData:filterData
 }
