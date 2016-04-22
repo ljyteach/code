@@ -3,8 +3,28 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<style type="text/css">
+		.content{
+			width:500px;
+			height: 600px;
+			border:1px solid #00f;
+		}
+	</style>
 </head>
 <body>
-	
+	<input type="button" class="tab" value="tab1">
+	<input type="button" class="tab" value="tab2">
+	<input type="button" class="tab" value="tab3">
+	<input type="button" class="tab" value="tab4">
+	<div class="content"></div>
+	<script type="text/javascript" src="script/jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		//选项卡加载jade引擎页面
+		$(".tab").click(function(){
+			var num = $(this).index() + 1
+			var url = "/gettab" + num;
+			$(".content").load(url)
+		})
+	</script>
 </body>
 </html>

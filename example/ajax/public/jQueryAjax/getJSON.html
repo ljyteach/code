@@ -5,6 +5,16 @@
 	<title>Document</title>
 </head>
 <body>
-	
+	<h1>可以跨域</h1>
+	<input type="button" id="getjson" value="获取数据">
+	<script type="text/javascript" src="script/jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		$("#getjson").click(function(){
+			//可以把字符串转换成json对象。
+			$.getJSON("/getjson",function(data){
+				alert(data);
+			})
+		})
+	</script>	
 </body>
 </html>

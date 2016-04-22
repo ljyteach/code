@@ -5,6 +5,30 @@
 	<title>Document</title>
 </head>
 <body>
-	
+	<input type="button" id="postData" value="获取数据">
+	<input type="button" id="sendParam" value="传递参数">
+	<input type="button" id="test" value="测试">
+	<script type="text/javascript" src="script/jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		$("#postData").click(function(){
+			$.post("/posttxt",function(data){
+				alert(data);
+			})
+		})
+
+		$("#sendParam").click(function(){
+			$.post("/sendParam",{key:"haha"},function(data){
+				alert(data);
+			})
+		})
+
+		$("#test").click(function(){
+			$.post("/posttxt",function(a,b,c,d,e){
+				console.log(a);  //data
+				console.log(b);  //statues
+				console.log(c);  //xhr对象
+			})
+		})
+	</script>
 </body>
 </html>
