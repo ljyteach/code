@@ -5,6 +5,28 @@
 	<title>Document</title>
 </head>
 <body>
-	
+	<form id="myForm" action="" method="post">
+			<input type="text" name="username">
+			<input type="password" name="password">
+			<input type="text" name="text">
+			<input type="text" name="age">
+			<input id="btn" type="button" value="注册">
+	</form>
+
+	<script type="text/javascript" src="script/jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		$("#btn").click(function(){
+			var params = $("#myForm").serializeArray();
+			$.ajax({
+				url:"/serialize",
+				data:params,
+				type:"post",
+				success:function(data){
+					console.log(data);
+					// console.log("数据发送成功!")
+				}
+			})
+		})
+	</script>
 </body>
 </html>
