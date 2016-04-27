@@ -15,13 +15,13 @@ app.get("/gettxt",function(req,res){
 })
 
 app.get("/sendParam",function(req,res){
-	var para = req.query.key;
-	res.send("服务器发送的数据：" + para);
+	var para = req.query;
+	res.send(para);
 })
 
 app.post("/sendParam",function(req,res){
-	var para = req.body.key;
-	res.send("服务器发送的数据：" + para);
+	var para = req.body;
+	res.send(para);
 })
 
 app.get("/getjson",function(req,res){
@@ -47,6 +47,22 @@ app.get("/gettab:id",function(req,res){
 app.post("/serialize",function(req,res){
 	console.log(req.body);
 	res.send("数据接收成功")
+})
+
+app.get("/cross",function(req,res){
+	res.header("Access-Control-Allow-Origin","*")
+	res.send("跨域请求的数据");
+})
+
+app.get("/jsonp",function(req,res){
+	var params = req.query;
+	res.jsonp({key:"lee",test:params.test})
+})
+
+app.post("/jsonp",function(req,res){
+	var params = req.body;
+	console.log("post")
+	res.jsonp({key:"lee",test:params.test})
 })
 
 

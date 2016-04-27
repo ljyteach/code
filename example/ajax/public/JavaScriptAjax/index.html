@@ -3,16 +3,58 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<link rel="stylesheet" href="style/index.css">
 </head>
 <body>
-	<h1>hello ajax</h1>
-	<ul>
-		<li><a href="/javascriptAjax/gettxt.html">get获取文本内容）</a></li>
-		<li><a href="/javascriptAjax/getjson.html">get获取json数据 </a></li>
-		<li><a href="/javascriptAjax/post.html">发送post请求</a></li>
-		<li><a href="/javascriptAjax/postadd.html">post表格添加数据</a></li>
-		<li><a href="/javascriptAjax/postdelete.html">post表格删除数据</a></li>
-	</ul>
+	<input type="button" id="get" value="get请求">
+	<input type="button" id="post" value="post请求">
+	<input type="button" id="myAjax" value="myAjax">
+	<script type="text/javascript" src="script/myAjax.js"></script>
+	<script type="text/javascript">
+		//xhr对象
+		var xhr = new XMLHttpRequest();
+
+		//get请求并传递参数
+		var getBtn = document.getElementById("get");
+		getBtn.onclick = function(){
+			xhr.open("get","/sendParam?key=lee",true);
+			xhr.send();
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState == 4 && xhr.status == 200){
+					console.log(xhr.responseText);
+				}
+			}
+		}
+
+		//post请求并传递参数
+		var postBtn = document.getElementById("post");
+		postBtn.onclick = function(){
+			xhr.open("post","/sendParam",true);
+			//在请求头中设置post提交数据的方式
+			xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+			xhr.send("key=lee&name=test");
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState == 4 && xhr.status == 200){
+					console.log(xhr.responseText);
+				}
+			}
+		}
+
+		var myBtn = document.getElementById("myAjax");
+		myBtn.onclick = function(){
+			myAjax.get("/gettxt",function(data){
+				alert(data);
+			})
+		}
+
+		//兼容问题
+		// var xmlhttp = null;
+		// if (window.XMLHttpRequest){
+		// 	xmlhttp=new XMLHttpRequest();
+		// }
+		// else{
+		// 	xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		// }
+
+	</script>
 </body>
 </html>

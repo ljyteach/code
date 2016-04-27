@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	title Document
+body
+
+	h1 欢迎 #{user.username}
+	a(href="/logout") 注销
+	ul
+		li 普通权限
+		li 普通权限
+		li 普通权限
+		- if(user.permission == 2)
+			li 2权限
+		- if(user.permission == 1)
+			li 1权限
+		- if(user.permission == 0)
+			li 0权限
+	

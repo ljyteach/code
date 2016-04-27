@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" id="get" value="跨域ajax请求（无法完成）">
+	<input type="button" id="jsonp" value="JSONP跨域请求">
+	<script type="text/javascript">
+		var oBtn = document.getElementById("get");
+		var xhr = new XMLHttpRequest();
+		oBtn.onclick = function(){
+			//使用ajax不能跨域发送ajax请求
+			xhr.open("get","127.0.0.1:3000/gettxt",true);
+			xhr.send();
+			xhr.onreadystatechange = function(){
+				if(xhr.readyState == 4 && xhr.status == 200){
+					alert(xhr.responseText);
+				}
+			}
+		}
+
+		var oJsonp = document.getElementById("jsonp");
+		oJsonp.onclick = function(){
+			var script = document.createElement("script");
+			script.src="http://127.0.0.1:3000/jsonptest";
+			var body = document.getElementsByTagName("body")[0];
+			head.appendChild(script);
+			function haha(data){
+				console.log(data);
+			}
+		}
+
+	</script>
+	
+</body>
+</html>

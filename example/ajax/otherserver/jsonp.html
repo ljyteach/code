@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" id="get" value="getJSON跨域获取数据">
+	<input type="button" id="ajax" value="ajax跨域获取数据">
+	<input type="button" id="post" value="ajax,post跨域获取数据">
+	<script src="script/jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		$("#get").click(function(){
+			$.getJSON("http://127.0.0.1:3000/jsonp?callback=?",function(data){
+				console.log(data);
+			})
+		})
+
+		$("#ajax").click(function(){
+			$.ajax({
+				type:"get",
+				url:"http://127.0.0.1:3000/jsonp",
+				dataType:"jsonp",
+				data:{test:"haha"},
+				success:function(data){
+					console.log(data);
+				}
+
+			})
+		})
+		$("#post").click(function(){
+			$.ajax({
+				type:"post",   //jsonp不能发送post请求，所以仍然是get方法
+				url:"http://127.0.0.1:3000/jsonp",
+				dataType:"jsonp",
+				data:{test:"haha"},
+				success:function(data){
+					console.log(data);
+				}
+
+			})
+		})
+	</script>
+</body>
+</html>
