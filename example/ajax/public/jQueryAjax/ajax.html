@@ -5,6 +5,31 @@
 	<title>Document</title>
 </head>
 <body>
-	
+	<input id="get" type="button" value="get">
+	<input id="post" type="button" value="post">
+	<script type="text/javascript" src="script/jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		$("#get").click(function(){
+			$.ajax({
+				url:"/gettxt",
+				data:{},
+				type:"get",
+				success:function(data){
+					console.log("get "+data);
+				}
+			})
+		})
+
+		$("#post").click(function(){
+			$.ajax({
+				url:"/posttxta",
+				data:{},
+				type:"post",
+				success:function(data){
+					console.log("post "+data);
+				}
+			})
+		})
+	</script>
 </body>
 </html>

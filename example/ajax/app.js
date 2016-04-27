@@ -44,6 +44,11 @@ app.get("/gettab:id",function(req,res){
 	//res.send("haha")
 })
 
+app.post("/serialize",function(req,res){
+	console.log(req.body);
+	res.send("数据接收成功")
+})
+
 
 
 app.listen("3000");
