@@ -1,0 +1,5 @@
+[
+	{"username":"lee","password":"aaa","permission":0},
+	{"username":"zhang","password":"bbb","permission":1},
+	{"username":"wang","password":"ccc","permission":2}
+]

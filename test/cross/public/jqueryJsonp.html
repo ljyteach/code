@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" id="btn" value="获取数据">
+	<script src="script/jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		$("#btn").click(function(){
+			$.ajax({
+				type:"get",
+				url:"http://127.0.0.1:8080/jsonp",
+				dataType:"jsonp",
+				success:function(data){
+					alert(data.name);
+				}
+			})
+		})
+	</script>
+</body>
+</html>
