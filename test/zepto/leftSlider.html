@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style media="screen">
+      *{
+        margin:0;
+        padding:0;
+      }
+      html,body{
+        height:100%;
+      }
+      .left{
+        position: absolute;;
+        top:0;
+        width:300px;
+        height:100%;
+        background-color: yellow;
+        -webkit-transform: translateX(-300px);
+        -moz-transform: translateX(-300px);
+        -o-transform: translateX(-300px);
+        -ms-transform: translateX(-300px);
+        transform: translateX(-300px);
+        -webkit-transition: transform 5s ease 1s;
+        -moz-transition: transform 5s ease 1s;
+        -o-transition: transform 5s ease 1s;
+        -ms-transition: transform 5s ease 1s;
+        transition: transform 5s ease 1s;
+      }
+      .left.show{
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -o-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+      }
+      .btn{
+        position: absolute;
+        top:5%;
+        left:5%;
+        background-color: red;
+      }
+      .content{
+        background-color: green;
+        height:100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="left">
+      左边栏
+    </div>
+    <span class="btn">
+      show
+    </span>
+    <div class="content">
+      网页的内容
+    </div>
+    <script src="script/zepto.min.js"></script>
+    <script src="script/zepto-touch.js"></script>
+    <script type="text/javascript">
+      $(".btn").click(function(){
+        $(".left").toggleClass("show");
+        var txt = $(".btn").text() == "hide"?"show":"hide";
+        $(".btn").text(txt);
+      })
+    </script>
+  </body>
+</html>

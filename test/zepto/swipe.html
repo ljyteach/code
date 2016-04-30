@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>tap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style media="screen">
+      .box{
+        width:100px;
+        height:100px;
+        background-color: red;
+      }
+      .swipe{
+        width:200px;
+        height:200px;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      随意滑动
+    </div>
+    <div class="swipe">
+      可以上下左右滑动
+    </div>
+    <script src="script/zepto.min.js"></script>
+    <script src="script/zepto-touch.js"></script>
+    <script type="text/javascript">
+      $(".box").swipe(function(){
+        alert("随意滑动");
+      })
+      $(".swipe").swipeLeft(function(){
+        alert("向左滑动");
+      })
+      $(".swipe").swipeRight(function(){
+        alert("向右滑动");
+      })
+      $(".swipe").swipeUp(function(){
+        alert("向上滑动");
+      })
+      $(".swipe").swipeDown(function(){
+        alert("向下滑动");
+      })
+    </script>
+  </body>
+</html>
