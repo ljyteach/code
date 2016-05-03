@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.row{
+			border:1px solid #f00;
+			padding:10px;
+		}
+		.row:after{
+			content:"";
+			display: table;
+			clear:both;
+		}
+		.box{
+			height:100px;
+			width:100px;
+			border:1px solid #00f;
+			float: left;
+			margin-left:10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		
+
+	</div>
+	<script type="text/javascript" src="jquery-1.11.1.js"></script>
+	<script type="text/javascript">
+		var arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,1,2,3,4,5,6,7,8,9];
+		var rowLength = Math.ceil(arr.length/4);
+		for(var i = 0;i<rowLength;i++){
+			var $row = $("<div class='row'></div>");
+			for(var j = 0;j < 4;j++){
+				var $box = $("<div class='box'></div>");
+				var index = i * 4 + j;
+				$box.append(arr[index]);
+				$row.append($box)
+			}
+			$(".container").append($row);
+		}
+
+	</script>
+</body>
+</html>

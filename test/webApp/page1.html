@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		body{
+			font-family: "微软雅黑";
+			font-size: 50%;
+		}
+		.floatfix:after{
+			/*使用before或者after选择器清浮动*/
+		    content:"";
+		    display:block;  
+		    clear:both;
+		}
+		.header{
+			background-color: #fe6732;
+			box-shadow:1px 1px 3px #795E5E;
+			padding:0 15px;
+			line-height: 3.9rem;
+			/*header不设置高度，让内容撑起header的高度*/
+		}
+		.header .return{
+			float: left;
+
+		}
+		.header .return a img{
+			display: block;
+			margin-top:1rem;
+			width:1.5rem;
+			/*单位 em rem:百分比单位，由浏览器转换成像素。
+			一、如果元素父级font-size为16px,那么子级元素1rem为16px;
+			为什么html的font-size设置成了62.5%?
+
+
+
+			*/
+		}
+		.header h3{
+			float: left;
+			margin-left: 30%;
+			color: #fff;
+			font-size: 1.2rem;
+		}
+		.title{
+			text-align: center;
+		}
+		.title span{
+			color: #fe6732;
+			font-size: 5rem;
+		}
+		.info{
+			border:3px solid #f9f9f9;
+			box-shadow: 2px 2px 3px #ddd,-2px -2px 3px #ddd;
+			width:88%;
+			margin:0 auto;
+		}
+		.info li{
+			list-style: none;
+			margin-left: 15px;
+			margin-right: 15px;
+			line-height: 4rem;
+			font-size: 1.2rem;
+			border-bottom: 1px solid #ddd;
+		}
+		.info input{
+			width:100%;
+			font-size: 1.2rem;
+			border:none;
+			outline: none;  /*获取焦点时无边框*/
+
+		}
+		.info .info-last{
+			border:none;
+		}
+		.sub-box{
+			width:88%;
+			margin:2rem auto;
+
+		}
+		#sub{
+			color:#fff;
+			background-color: #fe6732;
+			width:100%;
+			line-height: 4rem;
+			border:none;
+			border-radius: 5px;
+			font-size: 1.5rem;
+		}
+	</style>
+</head>
+<body>
+	<div class="header floatfix">
+		<div class="return">
+			<a href=""><img src="images/return.png" alt=""></a>
+		</div>
+		<h3>订单支付</h3>
+	</div>
+	<div class="title">
+		<span>￥</span>
+		<span>3.14</span>
+	</div>
+	<form action="" >
+		<ul class="info">
+			<li>费用详情</li>
+			<li>xxxxx美容店</li>
+			<li>
+				<input type="text" placeholder="请输入金额">
+			</li>
+			<li>
+				<input type="text" placeholder="请输入备注信息">
+			</li>
+			<li class="info-last">
+				<span>折扣率</span>
+				<span>8折</span>
+			</li>
+		</ul>
+		<div class="sub-box">
+			<input id="sub" type="submit" value="提交订单">
+		</div>
+	</form>
+</body>
+</html>
