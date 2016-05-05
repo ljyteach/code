@@ -4,38 +4,42 @@
     <meta charset="utf-8">
     <title>tap</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="script/zepto.min.js"></script>
+    <script src="script/zepto-touch.js"></script>
     <style media="screen">
       .box{
         width:100px;
         height:100px;
         background-color: red;
-
+        -webkit-transform:translateX(0);
+        -moz-transform:translateX(0);
+        -o-transform:translateX(0);
+        transform:translateX(0);
         -webkit-transition:transform 1s;
-        transition:transform 1s;
+        -moz-transition:transform 1s;
+        -o-transition:transform 1s;
+        transition:transform 1s; 
+        
       }
-      .box:active{
-        -webkit-transform:scale(2);
-        transform:scale(2);
+      .move{
+        -webkit-transform:translateX(100px);
+        -moz-transform:translateX(100px);
+        -o-transform:translateX(100px);
+        transform:translateX(100px);
       }
 
-      /*.change{
-        -webkit-transform:scale(1);
-        transform:scale(1);
-      }*/
     </style>
   </head>
   <body>
     <div class="box">
 
     </div>
-    <script src="script/zepto.min.js"></script>
-    <script src="script/zepto-touch.js"></script>
     <script type="text/javascript">
-      // $(".box").bind("tap",function(){
-      //   alert("haha");
-      // })
-      $(".box").click(function(){
-        $(this).toggleClass("change");
+      $(".box").swipeLeft(function(){
+        $(this).removeClass("move")
+      })
+      $(".box").swipeRight(function(){
+        $(this).addClass("move")
       })
     </script>
   </body>

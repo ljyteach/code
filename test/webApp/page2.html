@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		html{
+			font-size: 30px;
+		}
+		
+		.box1{
+			font-size: 50px;
+		}
+		.box1 .em{
+			font-size: 1em;
+			padding-left:1em;
+		}
+		.box1 .rem{
+			font-size: 1em;
+			padding-left:1rem;
+		}
+		.box2 .em{
+			font-size: 1em;
+			padding-left:1em;
+		}
+		.box2 .rem{
+			font-size: 1em;
+			padding-left:1rem;
+		}
+		/*
+			em的大小相对于父级元素
+			Em 和 rem 单位之间的区别是浏览器根据谁来转化成px值 理解这种差异是决定何时使用哪个单元的关键。
+			rem相对于html标签的font-size转换
+			em相对于当前的标签的font-size转换。
+		*/
+	</style>
+</head>
+<body>
+	<div class="box1">
+		<div class="em">我是em</div>
+		<div class="rem">我是rem</div>
+	</div>
+	<div class="box2">
+		<div class="em">我是em</div>
+		<div class="rem">我是rem</div>
+	</div>
+</body>
+</html>
