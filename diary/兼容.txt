@@ -1,0 +1,161 @@
+﻿
+《兼容》
+1 属性微调·过滤
+div { margin-top:8px;}   一般浏览器
+
+div { margin-top:-8px\0/;}   仅IE8识别
+
+div { *margin-top:-8px;}   仅IE7、6识别
+
+div { _margin-top:-8px;}   仅IE6识别
+
+书写至正常内部样式后，书写顺序为一般浏览器、IE8、IE7、IE6依次写入。
+
+2 选择器过滤
+
+#div{ width:200px;}         一般浏览器
+
+* html #div{ width:300px;}  仅IE6识别
+
+*+html #div{ width:500px;}  仅IE7识别
+
+
+3 ---媒介查询---
+
+首先我们在使用Media的时候需要先设置下面这段代码，来兼容移动设备的展示效果：
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+这段代码的几个参数解释：
+
+width = device-width：宽度等于当前设备的宽度
+
+initial-scale：初始的缩放比例（默认设置为1.0）  
+
+minimum-scale：允许用户缩放到的最小比例（默认设置为1.0）    
+
+maximum-scale：允许用户缩放到的最大比例（默认设置为1.0）   
+
+user-scalable：用户是否可以手动缩放（默认设置为no，因为我们不希望用户放大缩小页面）
+
+
+写入css样式表最下面：
+
+	@media screen and (max-width: 960px){
+       	   .box1{
+              background: #666;
+       	   }
+	}
+
+当整个标签内部样式需要大部分改动时可用选择器过滤
+
+/*针对Firefox*/
+	@-moz-document url-prefix() {
+		div{ width:500px; }
+	}
+	
+/*针对Safari & Chrome*/
+	@media screen and (-webkit-min-device-pixel-ratio:0) {
+		div{ width:100%; }
+	}
+
+
+4 样式表过滤
+
+<!--[if ie 6]>  仅ie6识别的html  <![endif]-->
+	<!--[if lt ie 6]>  小于ie6识别的html  <![endif]-->
+	<!--[if gt ie 6]>  大于ie6识别的html  <![endif]-->
+	<!--[if ie]>  仅ie识别的html  <![endif]-->
+	<!--[if lte ie 6]>  小于等于ie6识别的html  <![endif]-->
+	<!--[if gte ie 6]>  大于等于ie6识别的html  <![endif]-->
+
+
+父级高度不能自适应
+
+原因：子元素使用了float
+/* For modern browsers */
+.cf:before,
+.cf:after {
+    content:"";
+    display:table;
+}
+
+.cf:after {
+    clear:both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+    zoom:1;
+    clear:both;	
+}
+
+注：给有图片的元素加背景颜色时，高度不能自适应颜色无显示。
+
+5.rem 单位的使用：Mozilla Firefox 3.6+、Apple Safari 5+、Google Chrome、IE9+和Opera11+。要是还要兼容IE6-8的话，劝你还是直接放弃使用rem吧！
+
+html {font-size: 62.5%;  /*10 ÷ 16 × 100% = 62.5%*/}
+
+body {font-size: 1.4rem;  /*1.4 × 10px = 14px */}
+
+h1 { font-size: 2.4rem;  /*2.4 × 10px = 24px*/}
+
+
+引入外部Css样式“在<header>内写入</header>”（ 做整套页面时可引用其公共的样式 ）
+
+<link href="css/文件名字.css" type="text/css" rel="stylesheet" />
+
+72dpi 1厘米=28.346像素
+
+300dpi 1厘米=118.11像素 
+
+1英寸(in)=2.54厘米(cm)
+
+手机适应的尺寸 = 分辨率宽度 / 手机给出的基数
+
+ 
+node.js  express项目创建
+
+webstorm 写node
+下载node.js
+运行里 输入 npm install -g express 全局安装express 框架
+随便创建一个文件名mytext
+npm install -g express-generator
+express app
+cd app
+npm install
+npm start
+
+127.0.0.1:3000 访问本地IP的3000的端口
+
+ajax
+.get();
+获取正确为200，错误为404
+true为异步，fales为同步
+json 对象表示法
+http://www.tupwk.com.cn/downpage/index.asp?Page=1  电子书籍下载地址
+
+字体转换
+http://www.fontsquirrel.com/tools/webfont-generator    在线转换字体格式
+http://www.font2web.com/
+
+ICOn图标网站
+http://www.iconfont.cn/
+http://fortawesome.github.io/Font-Awesome/
+
+Execel 转换 Html网址
+http://tableizer.journalistopia.com/
+
+
+金额比对
+obj.replace(/^\./g,'').replace(/\..*\./g,'.').replace('.','$#$').replace(/00/g,'').replace('$#$','.').replace(/^(\-)*(\d+)\.(\d\d).*$/,'$1$2.$3')
+
+CDN
+cdn.bootcss.com/jquery-mobile/1.4.5/jquery.mobile.js
+cdn.bootcss.com/jquery-mobile/1.4.5/jquery.mobile.min.js
+
+
+
+
+
+
+注：写入多了容易卡顿
