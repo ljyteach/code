@@ -18,7 +18,7 @@ app.post("/login",function(req,res){
 })
 
 app.get("/login",function(req,res){
-	console.log(req.query);  //get求情可以直接使用query属性获取
+	console.log(req.query);  //get请求可以直接使用query属性获取
 	res.send("get用户登录");
 })
 //处理404

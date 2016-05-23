@@ -1,0 +1,14 @@
+.box {
+  color: red;
+}
+ul {
+  list-style: none;
+}
+ul li {
+  width: 100px;
+  height: 100px;
+  background-color: #f00;
+}
+ul li:hover {
+  background-color: #000;
+}

@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* less是css预处理语言，完全兼容css语法。*/
+.widthAndHeight {
+  width: 100px;
+  height: 100px;
+}
+.box0 {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #ffff00;
+  background-color: #ff0000;
+}
+.box1 {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #0000ff;
+  background-color: #ff0000;
+}
+.box2 {
+  width: 100px;
+  height: 100px;
+  border: 1px solid green;
+  background-color: #ff0000;
+}
+.box2:hover {
+  background-color: pink;
+}

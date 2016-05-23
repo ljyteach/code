@@ -1,0 +1,33 @@
+/*less重这里开始*/
+.box {
+  background-color: #ff0000;
+  border: 1px solid #0000ff;
+  width: 100px;
+  height: 100px;
+}
+.hover {
+  background-color: #ff0000;
+}
+.box:hover {
+  background-color: #00ff00;
+  width: 500px;
+}
+.list {
+  list-style: none;
+}
+.list li {
+  float: left;
+  height: 38px;
+  line-height: 38px;
+  background-color: #ffff00;
+  border: 1px solid #0000ff;
+  width: 200px;
+  text-align: center;
+}
+.list li a {
+  font-size: 20px;
+  text-decoration: none;
+}
+.list li:hover {
+  background-color: #0000ff;
+}

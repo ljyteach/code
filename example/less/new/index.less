@@ -1,0 +1,62 @@
+/*less重这里开始*/
+//less重这里开始
+@color:red;   //颜色
+@borCol:blue;  //border颜色
+@hoverCol:yellow;  //hover颜色
+
+.box{
+	background-color: @color;
+	border:1px solid @borCol;
+	width:100px;
+	height:100px;
+}
+
+//混合：便于样式重用
+.hover{
+	background-color: @hoverCol;
+}
+
+//带参数的混合
+.hover(@col){
+	background-color: @col;
+}
+
+.box:hover{
+	.hover(#0f0);
+	.boxWidth(big);
+}
+
+//匹配模式
+.boxWidth(big){
+	width:500px;
+}
+.boxWidth(small){
+	width:200px;
+}
+
+//使用less完成菜单的样式。
+@bgCol:#ff0;
+@hoverCol:#f00;
+@borderCol:#00f;
+@fontSize:20px;
+.list{
+	list-style: none;
+	li{
+		float:left;
+		height:38px;
+		line-height: 38px;
+		background-color: @bgCol;
+		border:1px solid @borderCol;
+		width:200px;
+		text-align: center;
+
+		a{
+			font-size: @fontSize;
+			text-decoration: none;
+		}
+		&:hover{
+			background-color: @borderCol;
+		}
+	}
+}
+

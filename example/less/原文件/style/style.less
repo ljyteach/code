@@ -1,0 +1,51 @@
+*{margin:0;padding:0;}
+
+//less是css预处理语言，完全兼容css语法。
+/* less是css预处理语言，完全兼容css语法。*/
+
+@bgColor:red;
+
+.widthAndHeight{
+	width:100px;
+	height:100px;
+}
+
+//参数可以带默认值，也可以不带值。
+.border(@borderCol:#00f){
+	border:1px solid @borderCol;
+}
+
+//匹配模式：相同的选择器，根据传入不同的参数选择不同的样式。
+.bigBorder(big){
+	border: 5px solid green;
+}
+
+.bigBorder(small){
+	border: 1px solid green;
+}
+
+.box0{
+	.widthAndHeight;    //混合:可以重用样式。
+	.border(#ff0);
+	background-color: @bgColor;
+}
+
+.box1{
+	.widthAndHeight;    //混合:可以重用样式。
+	.border();   //有参数的混合，可以有括号也可以没有。
+	background-color: @bgColor;
+}
+
+.box2{
+	.widthAndHeight;    //混合:可以重用样式。
+	.bigBorder(small);   //有参数的混合，可以有括号也可以没有。
+	background-color: @bgColor;
+	&:hover{             //通过嵌套实现伪类
+		background-color: pink;
+	}
+}
+
+
+
+
+

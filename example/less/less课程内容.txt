@@ -1,0 +1,56 @@
+less:
+为css赋予了动态语言的特性，如变量、继承、运算、函数等。
+方便css的编写和维护
+
+编译工具：
+koala可以编译less和sass
+也可以通过node.js编译
+也可以通过浏览器端编译
+
+less注释：
+/* */:可以被编译出来  
+//不会编译出来
+
+定义变量：@color:red
+
+混合语法：便于样式重用。
+
+.box{
+  .border
+}
+.border{border:1px solid red}
+
+混合可以带参数：
+
+.border_01(@width){
+  height:@width
+}
+
+.border{
+  .border_01(30px);
+}
+
+带值的混合
+.border_01(@width:30px){
+  height:@width
+}
+
+.border{
+  .border_01();  //因为已经有值，所以不用传参数。
+}
+
+匹配模式：相当于js中的if
+
+练习：用css做一个三角形。
+
+运算：+ - * / 两边有一个值带像素就可以
+
+嵌套：&
+
+
+
+
+
+
+
+
